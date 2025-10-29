@@ -155,8 +155,9 @@ export const RosterTable = ({
         />
       )}
       <p>
-        Les joueurs dont le rater de la saison dernière est en orange n'ont pas
-        joué et n'auront donc pas d'évolution du salaire liée au rater.
+        Les joueurs dont le rater de la saison dernière est en orange n&apos;ont
+        pas joué et n&apos;auront donc pas d&apos;évolution du salaire liée au
+        rater.
       </p>
     </section>
   );
