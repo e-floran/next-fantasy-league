@@ -20,7 +20,7 @@ interface ContextData {
   setSelectedKeepers: Dispatch<SetStateAction<number[]>>;
   dataByTeamId: Map<number, TeamDetailsData>;
   unpickablePlayers: UnpickablePlayer[];
-  lastUpdate: Date;
+  lastUpdate: Date | null;
   handleDataRefresh: (
     newTeams: Team[],
     newUnpickables: UnpickablePlayer[],
