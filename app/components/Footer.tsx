@@ -3,24 +3,23 @@ import {
   CSSProperties,
   ReactElement,
   useContext,
-  useEffect,
-  useState,
+  // useEffect,
+  // useState,
 } from "react";
 import { createStyles } from "../utils/style";
 import { DataContext } from "../context/DataContext";
-import { NavButton } from "./NavButton";
-import AutorenewIcon from "@mui/icons-material/Autorenew";
-import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt";
-import { dailyUpdate } from "../../scripts/dailyUpdate";
+// import { NavButton } from "./NavButton";
+// import AutorenewIcon from "@mui/icons-material/Autorenew";
+// import SystemUpdateAltIcon from "@mui/icons-material/SystemUpdateAlt";
+// import { dailyUpdate } from "../../scripts/dailyUpdate";
 
 export const Footer = (): ReactElement => {
-  const { lastUpdate, handleDataRefresh, setIsUpdating } =
-    useContext(DataContext);
-  const [isLocal, setIsLocal] = useState(false);
+  const { lastUpdate } = useContext(DataContext);
+  // const [isLocal, setIsLocal] = useState(false);
 
-  useEffect(() => {
-    setIsLocal(window.location.hostname === "localhost");
-  }, []);
+  // useEffect(() => {
+  //   setIsLocal(window.location.hostname === "localhost");
+  // }, []);
 
   const styles = createStyles<CSSProperties>()({
     footer: {
@@ -43,23 +42,23 @@ export const Footer = (): ReactElement => {
 
   return (
     <footer style={styles.footer}>
-      {isLocal && (
+      {/* {isLocal && (
         <NavButton
           buttonIcon={SystemUpdateAltIcon}
           onClickButton={() => dailyUpdate(setIsUpdating)}
           navigateTo={"#"}
         />
-      )}
+      )} */}
       <a href="https://fantasy.espn.com/basketball/league?leagueId=3409">
         Fantasy league BBF
       </a>
       <article style={styles.updateContainer}>
         <p>Mise à jour des données : {lastUpdate.toLocaleString()}</p>
-        <NavButton
+        {/* <NavButton
           buttonIcon={AutorenewIcon}
           onClickButton={() => dailyUpdate(setIsUpdating, handleDataRefresh)}
           navigateTo={"#"}
-        />
+        /> */}
       </article>
     </footer>
   );

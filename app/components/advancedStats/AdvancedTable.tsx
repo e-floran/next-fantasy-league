@@ -1,5 +1,11 @@
-import { CSSProperties, useCallback, useMemo } from "react";
-import rosters from "../../assets/teams/rosters.json";
+import {
+  CSSProperties,
+  useCallback,
+  useMemo,
+  ReactElement,
+  useContext,
+} from "react";
+import { DataContext } from "../../context/DataContext";
 import {
   FiltersType,
   Player,
@@ -8,8 +14,6 @@ import {
 } from "../../utils/types";
 import { useSortColumns } from "../../hooks/useSortColumns";
 import { PlayerWithProjection } from "../teamDetails/RosterTable";
-import { useContext } from "react";
-import { DataContext } from "../../context/DataContext";
 
 export interface PlayerWithAdvancedStats extends PlayerWithProjection {
   raterBySalary: number;
@@ -31,16 +35,16 @@ export const AdvancedTable = ({
   cellStyle,
   categoriesToOmit,
   advancedFilters,
-}: AdvancedTableProps) => {
-  const { dataByTeamId } = useContext(DataContext);
+}: AdvancedTableProps): ReactElement => {
+  const { dataByTeamId, teams } = useContext(DataContext);
 
   const averageGamesPlayed = useMemo(() => {
-    const gamesPlayed = rosters.teams
+    const gamesPlayed = teams
       .map((team) => team.roster)
       .flat()
       .map((player) => player.gamesPlayed);
     return gamesPlayed.reduce((a, b) => a + b) / gamesPlayed.length;
-  }, []);
+  }, [teams]);
 
   const parsePlayerToAdvanced = useCallback(
     (
@@ -79,7 +83,7 @@ export const AdvancedTable = ({
   );
 
   const flatPlayers = useMemo(() => {
-    return rosters.teams
+    return teams
       .map((team) => {
         const teamData = dataByTeamId.get(team.id);
         return team.roster.map((player) => {
@@ -118,7 +122,7 @@ export const AdvancedTable = ({
             : true)
         );
       });
-  }, [advancedFilters, parsePlayerToAdvanced, dataByTeamId]);
+  }, [advancedFilters, parsePlayerToAdvanced, dataByTeamId, teams]);
 
   // const isLocal = location.hostname === "localhost";
 
