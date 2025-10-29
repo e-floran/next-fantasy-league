@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Format de la fantasy league",
+    "paragraphs": [
+      "Format head to head most categories. 16 joueurs par roster (dont 4 pivots maximum) et 9 catégories : FG%, FT%, 3PM, REB, AST, STL, BLK, TO et PTS."
+    ]
+  },
+  {
+    "title": "Draft",
+    "paragraphs": [
+      "Il s'agit d'une draft sous forme d'enchères. Chaque équipe démarre sa draft avec un budget de 200$, amputé de la valeur de ses keepers, et doit compléter son roster de 16 joueurs. Chaque GM nomme, à tour de rôle (comme une draft classique) un joueur sur lequel les enchères débutent à 1$. A chaque enchère, 10sec sont rajoutées au temps. L'enchère maximum autorisée est égale à votre budget restant - le nombre de joueurs restants à drafter (pour arriver à 16 joueurs). Une fois votre roster complet, vous pouvez quitter la draftroom sans problème."
+    ]
+  },
+  {
+    "title": "Agents libres",
+    "paragraphs": [
+      "En cours de saison, chaque équipe est tenue de respecter le salary cap fixé à 220$.",
+      "La gestion des agents libres se fait aussi par enchères. L'équipe ayant posé la plus grosse enchère récupère le joueur. Attention, vous n'avez le droit qu'à 5 picks par semaine (en général, ce chiffre peut varier les semaines avec des journées sans aucun match NBA). Le résultat des enchères est à 16h01. Vous avez donc jusqu'à 16h pour faire vos picks du jour. Évidemment, chaque pick dans le pool des FA doit se faire dans la limite du salary cap (220$). Vous pouvez regarder sur la page détail de votre équipe de cette application pour savoir quelle valeur maximale vous pouvez mettre sur le FA (ne pas se fier au Auction Budget d'ESPN, qui est réglé au max, c'est-à-dire 1000$, pour être tranquille sur toute la saison). En cas de soucis, un LM annulera le pick et le joueur sera rajouté à l'équipe suivante dans l'ordre des enchères.",
+      "Il est interdit de drop un joueur. Vous ne pouvez passer que par des drop conditionnés par un pick dans les FA (via les enchères). Dans le cas d'une réactivation du joueur présent sur l'IR, le drop simple est une action obligatoire (sauf si échange de joueur sur l'IR). Dans ce cas, le joueur drop ne pourra pas être récupéré par ce manager le jour-même. Exemple : Phoenix drop Seth Curry à 15h56, il n'a pas le droit de le récupéré à 16h (les autres managers peuvent). Si @Phoenix le drop à 16h01, il peut poser une enchère pour le récupérer le lendemain."
+    ]
+  },
+  {
+    "title": "Joueurs blessés",
+    "paragraphs": [
+      "Injury Spot : lorsqu'un de vos joueurs est noté 'Out' par ESPN, vous pouvez l'assigner à ce spot. Son salaire est alors sorti de votre MS, et vous pouvez alors engager un joueur, sans drop. Attention, au moment de réactiver le joueur mis précédemment sur l'IR, il faut vérifier que son salaire rentre dans la limite des 220$ de votre MS.",
+      "Il est interdit de pick les joueurs qui ont été annoncés out pour plus de 4 semaines ou n'ayant pas joué pendant les 4 dernières semaines (pour une raison autre que DNP - Coach's Decision). Dès que le joueur a rejoué, il redevient éligible aux picks. Si un joueur est blessé jusqu'à la fin de la saison (régulière NBA donc FL), même si son absence programmée est inférieure à 4 semaines, il ne peut pas être pick. Détails ci-dessous :",
+      "Cas général : si un joueur a une absence estimée à quatre semaines ou plus, du jour de la blessure à la date estimée du retour (source Rotowire), il ne peut pas être pick. Si un joueur avait une date de retour inférieure à quatre semaines puis que celle-ci a été repoussée au-delà de quatre semaines, son statut passe de sélectionnable à non sélectionnable. Par contre, si la date de retour évolue dans l'autre sens, le statut ne change pas. Un joueur qui est/était indisponible ne redevient disponible qu'à son retour en match.",
+      "Quatre dernières semaines de la saison : si un joueur est blessé avec une date de retour estimée qui va au-delà du dernier match de saison régulière, il ne peut être pick jusqu'à la fin de la saison.",
+      "Draft et quatre premières semaines de la saison : les quatre semaines d'absence pour blessure se calculent sur la saison régulière, comme si la nouvelle saison débutait au lendemain du dernier match de saison régulière de la saison précédente. Donc, si un joueur a raté la dernière semaine de saison régulière et que son retour est prévu une semaine après la reprise, il est sélectionnable. Toutefois, si le joueur a rejoué entre-temps en match NBA (playoffs, summer league ou pré-saison), sa durée d'absence est remise à zéro au jour du premier match de la saison. Par exemple, si un joueur a raté les trois dernières semaines de saison régulière, a rejoué en PO, s'est blessé à nouveau et son retour est prévu deux semaines après la reprise de la saison régulière, il est sélectionnable."
+    ]
+  },
+  {
+    "title": "Transferts",
+    "paragraphs": [
+      "Pour les trades, cette application vous offre un calculateur pour vérifier la validité de celui-ci. Une fois le trade accepté (sur ESPN), celui-ci sera effectif 48h après."
+    ]
+  },
+  {
+    "title": "Intersaison",
+    "paragraphs": [
+      "A chaque intersaison, les joueurs voient leurs salaires évoluer en fonction de leur PR, entre -5$ et +5$. Vous pouvez retrouver l'évolution prévue pour chacun sur la page d'étail de votre équipe de cette application. Les joueurs qui n'ont pas disputé la saison précédente (les rookies donc en priorité) ne connaissent pas d'évolution de salaire pour la saison à venir, afin de donner du mérite aux GM ayant réussis de bons paris à la draft. Pour permettre que chaque joueur repasse à la draft à un moment ou un autre, un malus de +5$ sera appliqué au 3ème keep. Si un joueur est tradé, le compteur de keep n'est pas remis à zéro. Seul un drop remets le compteur à zéro."
+    ]
+  }
+]

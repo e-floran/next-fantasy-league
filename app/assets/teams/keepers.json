@@ -1,0 +1,2444 @@
+{
+  "teams": [
+    {
+      "abbrev": "ASBR",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [5104157, 3975, 4711294, 4701230, 4397688, 4066320]
+      },
+      "id": 1,
+      "isActive": false,
+      "name": "ASBR Pirates",
+      "owners": [
+        "{D4FECFB1-F07A-4F75-BECF-B1F07A3F7549}",
+        "{4F6331EB-6FAE-4C6C-9C41-BD3E20AE5F74}"
+      ],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 5104157,
+            "playerPoolEntry": {
+              "id": 5104157,
+              "keeperValue": 56,
+              "onTeamId": 1,
+              "player": {
+                "firstName": "Victor",
+                "fullName": "Victor Wembanyama",
+                "id": 5104157,
+                "lastName": "Wembanyama",
+                "ownership": {
+                  "auctionValueAverage": 78.63,
+                  "averageDraftPosition": 3.49,
+                  "percentChange": 0.01,
+                  "percentOwned": 99.86,
+                  "percentStarted": 98.75
+                }
+              }
+            }},
+          {
+            "playerId": 4701230,
+            "playerPoolEntry": {
+              "id": 4701230,
+              "keeperValue": 8,
+              "onTeamId": 1,
+              "player": {
+                "firstName": "Jalen",
+                "fullName": "Jalen Johnson",
+                "id": 4701230,
+                "lastName": "Johnson",
+                "ownership": {
+                  "auctionValueAverage": 18.05,
+                  "averageDraftPosition": 48.2,
+                  "percentChange": 0.21,
+                  "percentOwned": 93.83,
+                  "percentStarted": 84.46
+                }
+              }
+            }},
+          {
+            "playerId": 4711294,
+            "playerPoolEntry": {
+              "id": 4711294,
+              "keeperValue": 1,
+              "onTeamId": 1,
+              "player": {
+                "firstName": "Matas",
+                "fullName": "Matas Buzelis",
+                "id": 4711294,
+                "lastName": "Buzelis",
+                "ownership": {
+                  "auctionValueAverage": 2.13,
+                  "averageDraftPosition": 126.73,
+                  "percentChange": 1.81,
+                  "percentOwned": 38.82,
+                  "percentStarted": 12.15
+                }
+              }
+            }},
+          {
+            "playerId": 4397688,
+            "playerPoolEntry": {
+              "id": 4397688,
+              "keeperValue": 13,
+              "onTeamId": 1,
+              "player": {
+                "firstName": "Trey",
+                "fullName": "Trey Murphy III",
+                "id": 4397688,
+                "lastName": "Murphy III",
+                "ownership": {
+                  "auctionValueAverage": {
+                    "source": "9.0",
+                    "parsedValue": 9
+                  },
+                  "averageDraftPosition": 69.41,
+                  "percentChange": 0.44,
+                  "percentOwned": 86.21,
+                  "percentStarted": 78.25
+                }
+              }
+            }},
+          {
+            "playerId": 3975,
+            "playerPoolEntry": {
+              "id": 3975,
+              "keeperValue": 44,
+              "onTeamId": 1,
+              "player": {
+                "firstName": "Stephen",
+                "fullName": "Stephen Curry",
+                "id": 3975,
+                "lastName": "Curry",
+                "ownership": {
+                  "auctionValueAverage": 45.39,
+                  "averageDraftPosition": {
+                    "source": "17.0",
+                    "parsedValue": 17
+                  },
+                  "percentChange": 0.01,
+                  "percentOwned": 99.84,
+                  "percentStarted": 98.52
+                }
+              }
+            }},
+          {
+            "playerId": 4066320,
+            "playerPoolEntry": {
+              "id": 4066320,
+              "keeperValue": 18,
+              "onTeamId": 1,
+              "player": {
+                "firstName": "Desmond",
+                "fullName": "Desmond Bane",
+                "id": 4066320,
+                "lastName": "Bane",
+                "ownership": {
+                  "auctionValueAverage": 17.5,
+                  "averageDraftPosition": 42.84,
+                  "percentChange": 0.04,
+                  "percentOwned": 97.1,
+                  "percentStarted": 90.64
+                }
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "OD",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [
+          4433136, 4709138, 4683021, 5174563, 3078576, 3032977
+        ]
+      },
+      "id": 2,
+      "isActive": false,
+      "name": "Oberthur Ducks",
+      "owners": ["{24C076F8-363B-45DF-8076-F8363B85DF78}"],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 3078576,
+            "playerPoolEntry": {
+              "id": 3078576,
+              "keeperValue": 14,
+              "onTeamId": 2,
+              "player": {
+                "firstName": "Derrick",
+                "fullName": "Derrick White",
+                "id": 3078576,
+                "lastName": "White",
+                "ownership": {
+                  "auctionValueAverage": 19.35,
+                  "averageDraftPosition": 46.3,
+                  "percentChange": 0.05,
+                  "percentOwned": 97.32,
+                  "percentStarted": 89.18
+                }
+              }
+            }},
+          {
+            "playerId": 5174563,
+            "playerPoolEntry": {
+              "id": 5174563,
+              "keeperValue": 1,
+              "onTeamId": 2,
+              "player": {
+                "active": true,
+                "defaultPositionId": 2,
+                "eligibleSlots": [1, 2, 5, 6, 7, 8, 10, 11, 12, 13],
+                "firstName": "Kyshawn",
+                "fullName": "Kyshawn George",
+                "id": 5174563,
+                "injured": false,
+                "injuryStatus": "ACTIVE",
+                "lastName": "George",
+                "lastNewsDate": 1760338794000,
+                "ownership": {
+                  "auctionValueAverage": 0.17,
+                  "averageDraftPosition": 140.77,
+                  "percentChange": 0.61,
+                  "percentOwned": 3.52,
+                  "percentStarted": 0.92
+                },
+                "proTeamId": 27
+              }
+            }},
+          {
+            "playerId": 4683021,
+            "playerPoolEntry": {
+              "id": 4683021,
+              "keeperValue": 9,
+              "onTeamId": 2,
+              "player": {
+                "firstName": "Deni",
+                "fullName": "Deni Avdija",
+                "id": 4683021,
+                "lastName": "Avdija",
+                "ownership": {
+                  "auctionValueAverage": 8.89,
+                  "averageDraftPosition": 69.39,
+                  "percentChange": 0.62,
+                  "percentOwned": 84.19,
+                  "percentStarted": 72.55
+                }
+              }
+            }},
+          {
+            "playerId": 4709138,
+            "playerPoolEntry": {
+              "id": 4709138,
+              "keeperValue": 4,
+              "onTeamId": 2,
+              "player": {
+                "firstName": "Brandin",
+                "fullName": "Brandin Podziemski",
+                "id": 4709138,
+                "lastName": "Podziemski",
+                "ownership": {
+                  "auctionValueAverage": 0.38,
+                  "averageDraftPosition": 138.67,
+                  "percentChange": 0.9,
+                  "percentOwned": 18.72,
+                  "percentStarted": 9.63
+                }
+              }
+            }},
+          {
+            "playerId": 4433136,
+            "playerPoolEntry": {
+              "id": 4433136,
+              "keeperValue": 8,
+              "onTeamId": 2,
+              "player": {
+                "firstName": "Walker",
+                "fullName": "Walker Kessler",
+                "id": 4433136,
+                "lastName": "Kessler",
+                "ownership": {
+                  "auctionValueAverage": 7.85,
+                  "averageDraftPosition": 73.55,
+                  "percentChange": 0.27,
+                  "percentOwned": 84.11,
+                  "percentStarted": 74.78
+                }
+              }
+            }},
+          {
+            "playerId": 3032977,
+            "playerPoolEntry": {
+              "id": 3032977,
+              "keeperValue": 62,
+              "onTeamId": 2,
+              "player": {
+                "firstName": "Giannis",
+                "fullName": "Giannis Antetokounmpo",
+                "id": 3032977,
+                "lastName": "Antetokounmpo",
+                "ownership": {
+                  "auctionValueAverage": 71.86,
+                  "averageDraftPosition": 4.24,
+                  "percentChange": {
+                    "source": "0.0",
+                    "parsedValue": 0
+                  },
+                  "percentOwned": 99.92,
+                  "percentStarted": 98.75
+                }
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "CRJ",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [3934719, 3945274, 3064440, 4432165, 6583, 4066336]
+      },
+      "id": 3,
+      "isActive": false,
+      "name": "Cergy SlowMo",
+      "owners": ["{4C49A5AB-4A6E-47BC-AFD2-627657AE2BF3}"],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 3945274,
+            "playerPoolEntry": {
+              "id": 3945274,
+              "keeperValue": 53,
+              "onTeamId": 3,
+              "player": {
+                "firstName": "Luka",
+                "fullName": "Luka Doncic",
+                "id": 3945274,
+                "lastName": "Doncic",
+                "ownership": {
+                  "auctionValueAverage": 74.57,
+                  "averageDraftPosition": 4.85,
+                  "percentChange": {
+                    "source": "0.0",
+                    "parsedValue": 0
+                  },
+                  "percentOwned": 99.92,
+                  "percentStarted": 99.22
+                }
+              }
+            }},
+          {
+            "playerId": 6583,
+            "playerPoolEntry": {
+              "id": 6583,
+              "keeperValue": 40,
+              "onTeamId": 3,
+              "player": {
+                "firstName": "Anthony",
+                "fullName": "Anthony Davis",
+                "id": 6583,
+                "lastName": "Davis",
+                "ownership": {
+                  "auctionValueAverage": 55.56,
+                  "averageDraftPosition": 8.7,
+                  "percentChange": {
+                    "source": "0.0",
+                    "parsedValue": 0
+                  },
+                  "percentOwned": 99.84,
+                  "percentStarted": 98.75
+                }
+              }
+            }},
+          {
+            "playerId": 3064440,
+            "playerPoolEntry": {
+              "id": 3064440,
+              "keeperValue": 21,
+              "onTeamId": 3,
+              "player": {
+                "firstName": "Zach",
+                "fullName": "Zach LaVine",
+                "id": 3064440,
+                "lastName": "LaVine",
+                "ownership": {
+                  "auctionValueAverage": 8.41,
+                  "averageDraftPosition": 64.1,
+                  "percentChange": 0.37,
+                  "percentOwned": 89.43,
+                  "percentStarted": 82.61
+                }
+              }
+            }},
+          {
+            "playerId": 4066336,
+            "playerPoolEntry": {
+              "id": 4066336,
+              "keeperValue": 22,
+              "onTeamId": 3,
+              "player": {
+                "firstName": "Lauri",
+                "fullName": "Lauri Markkanen",
+                "id": 4066336,
+                "lastName": "Markkanen",
+                "ownership": {
+                  "auctionValueAverage": 6.85,
+                  "averageDraftPosition": 84.33,
+                  "percentChange": 0.42,
+                  "percentOwned": 82.4,
+                  "percentStarted": 69.69
+                }
+              }
+            }},
+          {
+            "playerId": 3934719,
+            "playerPoolEntry": {
+              "id": 3934719,
+              "keeperValue": 14,
+              "onTeamId": 3,
+              "player": {
+                "firstName": "OG",
+                "fullName": "OG Anunoby",
+                "id": 3934719,
+                "lastName": "Anunoby",
+                "ownership": {
+                  "auctionValueAverage": 6.37,
+                  "averageDraftPosition": 73.74,
+                  "percentChange": 0.5,
+                  "percentOwned": 85.74,
+                  "percentStarted": 74.58
+                }
+              }
+            }},
+          {
+            "playerId": 4432165,
+            "playerPoolEntry": {
+              "id": 4432165,
+              "keeperValue": 1,
+              "onTeamId": 3,
+              "player": {
+                "firstName": "Jalen",
+                "fullName": "Jalen Suggs",
+                "id": 4432165,
+                "lastName": "Suggs",
+                "ownership": {
+                  "auctionValueAverage": 2.2,
+                  "averageDraftPosition": 121.6,
+                  "percentChange": 0.27,
+                  "percentOwned": 61.42,
+                  "percentStarted": 18.21
+                }
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "ANA",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [4395651, 3202, 4277956, 4395702, 4066457, 4395725]
+      },
+      "id": 4,
+      "isActive": false,
+      "name": "Anaheim Ducks",
+      "owners": ["{DF803A2C-833A-4749-B635-0FAFDEC2AB79}"],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 4395651,
+            "playerPoolEntry": {
+              "id": 4395651,
+              "keeperValue": 15,
+              "onTeamId": 4,
+              "player": {
+                "firstName": "Coby",
+                "fullName": "Coby White",
+                "id": 4395651,
+                "lastName": "White",
+                "ownership": {
+                  "auctionValueAverage": 12.16,
+                  "averageDraftPosition": 52.43,
+                  "percentChange": 0.41,
+                  "percentOwned": 92.36,
+                  "percentStarted": 82.99
+                }
+              }
+            }},
+          {
+            "playerId": 4395725,
+            "playerPoolEntry": {
+              "id": 4395725,
+              "keeperValue": 15,
+              "onTeamId": 4,
+              "player": {
+                "firstName": "Tyler",
+                "fullName": "Tyler Herro",
+                "id": 4395725,
+                "lastName": "Herro",
+                "ownership": {
+                  "auctionValueAverage": 7.6,
+                  "averageDraftPosition": 70.39,
+                  "percentChange": -0.14,
+                  "percentOwned": 92.84,
+                  "percentStarted": 58.38
+                }
+              }
+            }},
+          {
+            "playerId": 3202,
+            "playerPoolEntry": {
+              "id": 3202,
+              "keeperValue": 44,
+              "onTeamId": 4,
+              "player": {
+                "firstName": "Kevin",
+                "fullName": "Kevin Durant",
+                "id": 3202,
+                "lastName": "Durant",
+                "ownership": {
+                  "auctionValueAverage": 33.58,
+                  "averageDraftPosition": 23.61,
+                  "percentChange": 0.01,
+                  "percentOwned": 99.82,
+                  "percentStarted": 99.1
+                }
+              }
+            }},
+          {
+            "playerId": 4277956,
+            "playerPoolEntry": {
+              "id": 4277956,
+              "keeperValue": 12,
+              "onTeamId": 4,
+              "player": {
+                "firstName": "Jordan",
+                "fullName": "Jordan Poole",
+                "id": 4277956,
+                "lastName": "Poole",
+                "ownership": {
+                  "auctionValueAverage": 7.6,
+                  "averageDraftPosition": 67.18,
+                  "percentChange": 0.19,
+                  "percentOwned": 90.93,
+                  "percentStarted": 81.38
+                }
+              }
+            }},
+          {
+            "playerId": 4395702,
+            "playerPoolEntry": {
+              "id": 4395702,
+              "keeperValue": 2,
+              "onTeamId": 4,
+              "player": {
+                "active": true,
+                "defaultPositionId": 2,
+                "eligibleSlots": [1, 5, 7, 8, 11, 12, 13],
+                "firstName": "Isaiah",
+                "fullName": "Isaiah Joe",
+                "id": 4395702,
+                "injured": false,
+                "injuryStatus": "DAY_TO_DAY",
+                "lastName": "Joe",
+                "lastNewsDate": 1760238658000,
+                "ownership": {
+                  "auctionValueAverage": 0.01,
+                  "averageDraftPosition": 140.32,
+                  "percentChange": {
+                    "source": "0.0",
+                    "parsedValue": 0
+                  },
+                  "percentOwned": 0.95,
+                  "percentStarted": 0.48
+                },
+                "proTeamId": 25
+              }
+            }},
+          {
+            "playerId": 4066457,
+            "playerPoolEntry": {
+              "id": 4066457,
+              "keeperValue": 18,
+              "onTeamId": 4,
+              "player": {
+                "firstName": "Austin",
+                "fullName": "Austin Reaves",
+                "id": 4066457,
+                "lastName": "Reaves",
+                "ownership": {
+                  "auctionValueAverage": 12.42,
+                  "averageDraftPosition": {
+                    "source": "53.0",
+                    "parsedValue": 53
+                  },
+                  "percentChange": 0.12,
+                  "percentOwned": 95.9,
+                  "percentStarted": 92.12
+                }
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "ALMr",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [
+          4017837, 4592691, 5104155, 5211175, 4431785, 4914336
+        ]
+      },
+      "id": 5,
+      "isActive": false,
+      "name": "Almr",
+      "owners": ["{B9BDB736-3D7C-47F7-B833-075FCBE7FA08}"],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 5211175,
+            "playerPoolEntry": {
+              "id": 5211175,
+              "keeperValue": 8,
+              "onTeamId": 5,
+              "player": {
+                "active": true,
+                "defaultPositionId": 3,
+                "eligibleSlots": [2, 6, 7, 8, 10, 11, 12, 13],
+                "firstName": "Zaccharie",
+                "fullName": "Zaccharie Risacher",
+                "id": 5211175,
+                "injured": false,
+                "injuryStatus": "ACTIVE",
+                "lastName": "Risacher",
+                "lastNewsDate": 1745076384000,
+                "ownership": {
+                  "auctionValueAverage": 0.37,
+                  "averageDraftPosition": 139.29,
+                  "percentChange": 0.82,
+                  "percentOwned": 14.4,
+                  "percentStarted": 4.04
+                },
+                "proTeamId": 1
+              }
+            }},
+          {
+            "playerId": 4914336,
+            "playerPoolEntry": {
+              "id": 4914336,
+              "keeperValue": 6,
+              "onTeamId": 5,
+              "player": {
+                "firstName": "Shaedon",
+                "fullName": "Shaedon Sharpe",
+                "id": 4914336,
+                "lastName": "Sharpe",
+                "ownership": {
+                  "auctionValueAverage": 2.77,
+                  "averageDraftPosition": 100.01,
+                  "percentChange": 1.72,
+                  "percentOwned": 64.83,
+                  "percentStarted": 39.79
+                }
+              }
+            }},
+          {
+            "playerId": 4592691,
+            "playerPoolEntry": {
+              "id": 4592691,
+              "keeperValue": 5,
+              "onTeamId": 5,
+              "player": {
+                "active": true,
+                "defaultPositionId": 4,
+                "eligibleSlots": [3, 6, 8, 9, 10, 11, 12, 13],
+                "firstName": "Jake",
+                "fullName": "Jake LaRavia",
+                "id": 4592691,
+                "injured": false,
+                "injuryStatus": "ACTIVE",
+                "lastName": "LaRavia",
+                "lastNewsDate": 1760344759000,
+                "ownership": {
+                  "auctionValueAverage": 0.02,
+                  "averageDraftPosition": 140.19,
+                  "percentChange": -0.02,
+                  "percentOwned": 0.92,
+                  "percentStarted": 0.53
+                },
+                "proTeamId": 13
+              }
+            }},
+          {
+            "playerId": 4017837,
+            "playerPoolEntry": {
+              "id": 4017837,
+              "keeperValue": 16,
+              "onTeamId": 5,
+              "player": {
+                "firstName": "Ivica",
+                "fullName": "Ivica Zubac",
+                "id": 4017837,
+                "lastName": "Zubac",
+                "ownership": {
+                  "auctionValueAverage": 19.35,
+                  "averageDraftPosition": 39.37,
+                  "percentChange": 0.09,
+                  "percentOwned": 96.11,
+                  "percentStarted": 89.49
+                }
+              }
+            }},
+          {
+            "playerId": 5104155,
+            "playerPoolEntry": {
+              "id": 5104155,
+              "keeperValue": 10,
+              "onTeamId": 5,
+              "player": {
+                "active": true,
+                "defaultPositionId": 3,
+                "eligibleSlots": [1, 2, 5, 6, 7, 8, 10, 11, 12, 13],
+                "firstName": "Bilal",
+                "fullName": "Bilal Coulibaly",
+                "id": 5104155,
+                "injured": true,
+                "injuryStatus": "OUT",
+                "lastName": "Coulibaly",
+                "lastNewsDate": 1758727642000,
+                "ownership": {
+                  "auctionValueAverage": 0.2,
+                  "averageDraftPosition": 141.06,
+                  "percentChange": 0.53,
+                  "percentOwned": 7.27,
+                  "percentStarted": 1.3
+                },
+                "proTeamId": 27
+              }
+            }},
+          {
+            "playerId": 4431785,
+            "playerPoolEntry": {
+              "id": 4431785,
+              "keeperValue": 6,
+              "onTeamId": 5,
+              "player": {
+                "firstName": "Scotty",
+                "fullName": "Scotty Pippen Jr.",
+                "id": 4431785,
+                "lastName": "Pippen Jr.",
+                "ownership": {
+                  "auctionValueAverage": 0.76,
+                  "averageDraftPosition": 124.52,
+                  "percentChange": -0.72,
+                  "percentOwned": 45.87,
+                  "percentStarted": 22.7
+                }
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "ATL",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [
+          4431767, 3062679, 4066354, 4222252, 3934672, 4396909
+        ]
+      },
+      "id": 6,
+      "isActive": false,
+      "name": "Atlantic Titans",
+      "owners": ["{7DB34B70-7989-4236-BB39-17513B492270}"],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 3062679,
+            "playerPoolEntry": {
+              "id": 3062679,
+              "keeperValue": 13,
+              "onTeamId": 6,
+              "player": {
+                "firstName": "Josh",
+                "fullName": "Josh Hart",
+                "id": 3062679,
+                "lastName": "Hart",
+                "ownership": {
+                  "auctionValueAverage": 12.84,
+                  "averageDraftPosition": 46.94,
+                  "percentChange": 0.05,
+                  "percentOwned": 97.48,
+                  "percentStarted": 90.88
+                }
+              }
+            }},
+          {
+            "playerId": 4396909,
+            "playerPoolEntry": {
+              "id": 4396909,
+              "keeperValue": 1,
+              "onTeamId": 6,
+              "player": {
+                "firstName": "Aaron",
+                "fullName": "Aaron Nesmith",
+                "id": 4396909,
+                "lastName": "Nesmith",
+                "ownership": {
+                  "auctionValueAverage": 0.4,
+                  "averageDraftPosition": 139.1,
+                  "percentChange": 0.76,
+                  "percentOwned": 13.67,
+                  "percentStarted": 3.87
+                }
+              }
+            }},
+          {
+            "playerId": 4066354,
+            "playerPoolEntry": {
+              "id": 4066354,
+              "keeperValue": 7,
+              "onTeamId": 6,
+              "player": {
+                "firstName": "Payton",
+                "fullName": "Payton Pritchard",
+                "id": 4066354,
+                "lastName": "Pritchard",
+                "ownership": {
+                  "auctionValueAverage": 4.13,
+                  "averageDraftPosition": 92.76,
+                  "percentChange": 0.49,
+                  "percentOwned": 79.95,
+                  "percentStarted": 60.86
+                }
+              }
+            }},
+          {
+            "playerId": 4431767,
+            "playerPoolEntry": {
+              "id": 4431767,
+              "keeperValue": 6,
+              "onTeamId": 6,
+              "player": {
+                "firstName": "Christian",
+                "fullName": "Christian Braun",
+                "id": 4431767,
+                "lastName": "Braun",
+                "ownership": {
+                  "auctionValueAverage": 4.29,
+                  "averageDraftPosition": 82.5,
+                  "percentChange": 0.59,
+                  "percentOwned": 81.69,
+                  "percentStarted": 68.78
+                }
+              }
+            }},
+          {
+            "playerId": 4222252,
+            "playerPoolEntry": {
+              "id": 4222252,
+              "keeperValue": 7,
+              "onTeamId": 6,
+              "player": {
+                "firstName": "Isaiah",
+                "fullName": "Isaiah Hartenstein",
+                "id": 4222252,
+                "lastName": "Hartenstein",
+                "ownership": {
+                  "auctionValueAverage": 2.38,
+                  "averageDraftPosition": 108.12,
+                  "percentChange": 0.1,
+                  "percentOwned": 73.96,
+                  "percentStarted": 45.61
+                }
+              }
+            }},
+          {
+            "playerId": 3934672,
+            "playerPoolEntry": {
+              "id": 3934672,
+              "keeperValue": 22,
+              "onTeamId": 6,
+              "player": {
+                "firstName": "Jalen",
+                "fullName": "Jalen Brunson",
+                "id": 3934672,
+                "lastName": "Brunson",
+                "ownership": {
+                  "auctionValueAverage": 34.1,
+                  "averageDraftPosition": 21.76,
+                  "percentChange": 0.01,
+                  "percentOwned": 99.79,
+                  "percentStarted": 98.75
+                }
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "LLB",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [
+          4871144, 4684740, 4702177, 4395625, 3133603, 4432158
+        ]
+      },
+      "id": 7,
+      "isActive": false,
+      "name": "Les Lents Béarnais",
+      "owners": ["{38F0AA49-CFB8-4C73-B0AA-49CFB8DC733F}"],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 4871144,
+            "playerPoolEntry": {
+              "id": 4871144,
+              "keeperValue": 25,
+              "onTeamId": 7,
+              "player": {
+                "firstName": "Alperen",
+                "fullName": "Alperen Sengun",
+                "id": 4871144,
+                "lastName": "Sengun",
+                "ownership": {
+                  "auctionValueAverage": 35.44,
+                  "averageDraftPosition": 24.03,
+                  "percentChange": 0.06,
+                  "percentOwned": 99.01,
+                  "percentStarted": 97.26
+                }
+              }
+            }},
+          {
+            "playerId": 4684740,
+            "playerPoolEntry": {
+              "id": 4684740,
+              "keeperValue": 15,
+              "onTeamId": 7,
+              "player": {
+                "firstName": "Amen",
+                "fullName": "Amen Thompson",
+                "id": 4684740,
+                "lastName": "Thompson",
+                "ownership": {
+                  "auctionValueAverage": 37.26,
+                  "averageDraftPosition": 23.61,
+                  "percentChange": 0.09,
+                  "percentOwned": 99.05,
+                  "percentStarted": 95.85
+                }
+              }
+            }},
+          {
+            "playerId": 4702177,
+            "playerPoolEntry": {
+              "id": 4702177,
+              "keeperValue": 7,
+              "onTeamId": 7,
+              "player": {
+                "active": true,
+                "defaultPositionId": 2,
+                "eligibleSlots": [1, 5, 7, 8, 11, 12, 13],
+                "firstName": "Keon",
+                "fullName": "Keon Ellis",
+                "id": 4702177,
+                "injured": false,
+                "injuryStatus": "ACTIVE",
+                "lastName": "Ellis",
+                "lastNewsDate": 1751228699000,
+                "ownership": {
+                  "auctionValueAverage": 0.24,
+                  "averageDraftPosition": 140.62,
+                  "percentChange": 0.61,
+                  "percentOwned": 4.26,
+                  "percentStarted": 1.03
+                },
+                "proTeamId": 23
+              }
+            }},
+          {
+            "playerId": 4432158,
+            "playerPoolEntry": {
+              "id": 4432158,
+              "keeperValue": 30,
+              "onTeamId": 7,
+              "player": {
+                "firstName": "Evan",
+                "fullName": "Evan Mobley",
+                "id": 4432158,
+                "lastName": "Mobley",
+                "ownership": {
+                  "auctionValueAverage": 25.67,
+                  "averageDraftPosition": 32.09,
+                  "percentChange": 0.02,
+                  "percentOwned": 99.27,
+                  "percentStarted": 95.98
+                }
+              }
+            }},
+          {
+            "playerId": 4395625,
+            "playerPoolEntry": {
+              "id": 4395625,
+              "keeperValue": 11,
+              "onTeamId": 7,
+              "player": {
+                "firstName": "RJ",
+                "fullName": "RJ Barrett",
+                "id": 4395625,
+                "lastName": "Barrett",
+                "ownership": {
+                  "auctionValueAverage": 4.08,
+                  "averageDraftPosition": 84.06,
+                  "percentChange": 0.42,
+                  "percentOwned": 84.41,
+                  "percentStarted": 73.06
+                }
+              }
+            }},
+          {
+            "playerId": 3133603,
+            "playerPoolEntry": {
+              "id": 3133603,
+              "keeperValue": 4,
+              "onTeamId": 7,
+              "player": {
+                "firstName": "Kelly",
+                "fullName": "Kelly Oubre Jr.",
+                "id": 3133603,
+                "lastName": "Oubre Jr.",
+                "ownership": {
+                  "auctionValueAverage": 0.7,
+                  "averageDraftPosition": {
+                    "source": "131.0",
+                    "parsedValue": 131
+                  },
+                  "percentChange": 0.84,
+                  "percentOwned": 45.54,
+                  "percentStarted": 9.59
+                }
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "SOS",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [
+          4566434, 3135045, 3917376, 2595516, 4684793, 4395724
+        ]
+      },
+      "id": 8,
+      "isActive": false,
+      "name": "Seattle Old Stringers",
+      "owners": ["{C8B88300-53A5-4E37-B01C-0A4953EA5852}"],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 4566434,
+            "playerPoolEntry": {
+              "id": 4566434,
+              "keeperValue": 22,
+              "onTeamId": 8,
+              "player": {
+                "firstName": "Franz",
+                "fullName": "Franz Wagner",
+                "id": 4566434,
+                "lastName": "Wagner",
+                "ownership": {
+                  "auctionValueAverage": 21.19,
+                  "averageDraftPosition": 35.54,
+                  "percentChange": 0.09,
+                  "percentOwned": 98.46,
+                  "percentStarted": 95.06
+                }
+              }
+            }},
+          {
+            "playerId": 4395724,
+            "playerPoolEntry": {
+              "id": 4395724,
+              "keeperValue": 1,
+              "onTeamId": 8,
+              "player": {
+                "firstName": "Immanuel",
+                "fullName": "Immanuel Quickley",
+                "id": 4395724,
+                "lastName": "Quickley",
+                "ownership": {
+                  "auctionValueAverage": 2.37,
+                  "averageDraftPosition": 111.04,
+                  "percentChange": 0.27,
+                  "percentOwned": 73.06,
+                  "percentStarted": 41.56
+                }
+              }
+            }},
+          {
+            "playerId": 3917376,
+            "playerPoolEntry": {
+              "id": 3917376,
+              "keeperValue": 23,
+              "onTeamId": 8,
+              "player": {
+                "firstName": "Jaylen",
+                "fullName": "Jaylen Brown",
+                "id": 3917376,
+                "lastName": "Brown",
+                "ownership": {
+                  "auctionValueAverage": 34.37,
+                  "averageDraftPosition": 21.73,
+                  "percentChange": 0.03,
+                  "percentOwned": 99.51,
+                  "percentStarted": 97.39
+                }
+              }
+            }},
+          {
+            "playerId": 3135045,
+            "playerPoolEntry": {
+              "id": 3135045,
+              "keeperValue": 3,
+              "onTeamId": 8,
+              "player": {
+                "active": true,
+                "defaultPositionId": 2,
+                "eligibleSlots": [0, 1, 5, 7, 8, 11, 12, 13],
+                "firstName": "Grayson",
+                "fullName": "Grayson Allen",
+                "id": 3135045,
+                "injured": false,
+                "injuryStatus": "ACTIVE",
+                "lastName": "Allen",
+                "lastNewsDate": 1759554241000,
+                "ownership": {
+                  "auctionValueAverage": 0.08,
+                  "averageDraftPosition": 140.48,
+                  "percentChange": -0.06,
+                  "percentOwned": 4.74,
+                  "percentStarted": 1.2
+                },
+                "proTeamId": 21
+              }
+            }},
+          {
+            "playerId": 2595516,
+            "playerPoolEntry": {
+              "id": 2595516,
+              "keeperValue": 13,
+              "onTeamId": 8,
+              "player": {
+                "firstName": "Norman",
+                "fullName": "Norman Powell",
+                "id": 2595516,
+                "lastName": "Powell",
+                "ownership": {
+                  "auctionValueAverage": 3.79,
+                  "averageDraftPosition": 89.6,
+                  "percentChange": 0.3,
+                  "percentOwned": 81.24,
+                  "percentStarted": 68.84
+                }
+              }
+            }},
+          {
+            "playerId": 4684793,
+            "playerPoolEntry": {
+              "id": 4684793,
+              "keeperValue": 1,
+              "onTeamId": 8,
+              "player": {
+                "active": true,
+                "defaultPositionId": 4,
+                "eligibleSlots": [3, 6, 8, 9, 10, 11, 12, 13],
+                "firstName": "Kyle",
+                "fullName": "Kyle Filipowski",
+                "id": 4684793,
+                "injured": false,
+                "injuryStatus": "ACTIVE",
+                "lastName": "Filipowski",
+                "lastNewsDate": 1760377561000,
+                "ownership": {
+                  "auctionValueAverage": 0.12,
+                  "averageDraftPosition": 140.78,
+                  "percentChange": 0.49,
+                  "percentOwned": 7.39,
+                  "percentStarted": 1.86
+                },
+                "proTeamId": 26
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "CE86",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [
+          5105565, 4432166, 4277961, 3136195, 4433247, 4593803
+        ]
+      },
+      "id": 10,
+      "isActive": false,
+      "name": "Chauvigny Eagles",
+      "owners": [
+        "{06BBF389-1B6C-44FD-99D5-53B74C478194}",
+        "{FB932DD3-7502-4291-8456-4992A12E6175}"
+      ],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 4432166,
+            "playerPoolEntry": {
+              "id": 4432166,
+              "keeperValue": 36,
+              "onTeamId": 10,
+              "player": {
+                "firstName": "Cade",
+                "fullName": "Cade Cunningham",
+                "id": 4432166,
+                "lastName": "Cunningham",
+                "ownership": {
+                  "auctionValueAverage": 58.42,
+                  "averageDraftPosition": 8.42,
+                  "percentChange": {
+                    "source": "0.0",
+                    "parsedValue": 0
+                  },
+                  "percentOwned": 99.87,
+                  "percentStarted": 99.12
+                }
+              }
+            }},
+          {
+            "playerId": 3136195,
+            "playerPoolEntry": {
+              "id": 3136195,
+              "keeperValue": 40,
+              "onTeamId": 10,
+              "player": {
+                "firstName": "Karl-Anthony",
+                "fullName": "Karl-Anthony Towns",
+                "id": 3136195,
+                "lastName": "Towns",
+                "ownership": {
+                  "auctionValueAverage": 50.39,
+                  "averageDraftPosition": 12.51,
+                  "percentChange": {
+                    "source": "0.0",
+                    "parsedValue": 0
+                  },
+                  "percentOwned": 99.86,
+                  "percentStarted": 98.83
+                }
+              }
+            }},
+          {
+            "playerId": 4593803,
+            "playerPoolEntry": {
+              "id": 4593803,
+              "keeperValue": 11,
+              "onTeamId": 10,
+              "player": {
+                "firstName": "Jalen",
+                "fullName": "Jalen Williams",
+                "id": 4593803,
+                "lastName": "Williams",
+                "ownership": {
+                  "auctionValueAverage": 37.64,
+                  "averageDraftPosition": 20.66,
+                  "percentChange": 0.01,
+                  "percentOwned": 99.64,
+                  "percentStarted": {
+                    "source": "98.0",
+                    "parsedValue": 98
+                  }
+                }
+              }
+            }},
+          {
+            "playerId": 4433247,
+            "playerPoolEntry": {
+              "id": 4433247,
+              "keeperValue": 3,
+              "onTeamId": 10,
+              "player": {
+                "active": true,
+                "defaultPositionId": 4,
+                "eligibleSlots": [3, 6, 8, 9, 10, 11, 12, 13],
+                "firstName": "Jonathan",
+                "fullName": "Jonathan Kuminga",
+                "id": 4433247,
+                "injured": false,
+                "injuryStatus": "ACTIVE",
+                "lastName": "Kuminga",
+                "lastNewsDate": 1760340247000,
+                "ownership": {
+                  "auctionValueAverage": 0.35,
+                  "averageDraftPosition": 138.58,
+                  "percentChange": -0.46,
+                  "percentOwned": 30.67,
+                  "percentStarted": 13.98
+                },
+                "proTeamId": 9
+              }
+            }},
+          {
+            "playerId": 5105565,
+            "playerPoolEntry": {
+              "id": 5105565,
+              "keeperValue": 7,
+              "onTeamId": 10,
+              "player": {
+                "firstName": "Donovan",
+                "fullName": "Donovan Clingan",
+                "id": 5105565,
+                "lastName": "Clingan",
+                "ownership": {
+                  "auctionValueAverage": 2.03,
+                  "averageDraftPosition": {
+                    "source": "125.0",
+                    "parsedValue": 125
+                  },
+                  "percentChange": 1.62,
+                  "percentOwned": {
+                    "source": "42.0",
+                    "parsedValue": 42
+                  },
+                  "percentStarted": 11.74
+                }
+              }
+            }},
+          {
+            "playerId": 4277961,
+            "playerPoolEntry": {
+              "id": 4277961,
+              "keeperValue": 32,
+              "onTeamId": 10,
+              "player": {
+                "firstName": "Jaren",
+                "fullName": "Jaren Jackson Jr.",
+                "id": 4277961,
+                "lastName": "Jackson Jr.",
+                "ownership": {
+                  "auctionValueAverage": 15.36,
+                  "averageDraftPosition": 54.47,
+                  "percentChange": -0.24,
+                  "percentOwned": 95.75,
+                  "percentStarted": 84.88
+                }
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "ANT",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [
+          4433255, 3907822, 4397014, 4683778, 4066328, 4431736
+        ]
+      },
+      "id": 11,
+      "isActive": false,
+      "name": "Antigua  Boyz ",
+      "owners": ["{5D7F50B5-D1B9-4E2E-BF50-B5D1B9EE2E52}"],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 4431736,
+            "playerPoolEntry": {
+              "id": 4431736,
+              "keeperValue": 6,
+              "onTeamId": 11,
+              "player": {
+                "firstName": "Toumani",
+                "fullName": "Toumani Camara",
+                "id": 4431736,
+                "lastName": "Camara",
+                "ownership": {
+                  "auctionValueAverage": 1.77,
+                  "averageDraftPosition": 124.63,
+                  "percentChange": 1.23,
+                  "percentOwned": 49.96,
+                  "percentStarted": 13.7
+                }
+              }
+            }},
+          {
+            "playerId": 3907822,
+            "playerPoolEntry": {
+              "id": 3907822,
+              "keeperValue": 2,
+              "onTeamId": 11,
+              "player": {
+                "active": true,
+                "defaultPositionId": 2,
+                "eligibleSlots": [1, 5, 7, 8, 11, 12, 13],
+                "firstName": "Malik",
+                "fullName": "Malik Beasley",
+                "id": 3907822,
+                "injured": false,
+                "injuryStatus": "ACTIVE",
+                "lastName": "Beasley",
+                "lastNewsDate": 1751215229000,
+                "ownership": {
+                  "auctionValueAverage": 0.01,
+                  "averageDraftPosition": {
+                    "source": "140.0",
+                    "parsedValue": 140
+                  },
+                  "percentChange": -0.22,
+                  "percentOwned": 4.01,
+                  "percentStarted": 0.89
+                },
+                "proTeamId": 0,
+                "stats": [
+                  {
+                    "averageStats": {
+                      "0": 16.29268292682927,
+                      "1": 0.06097560975609756,
+                      "2": 0.8902439024390244,
+                      "3": 1.6951219512195121,
+                      "4": 0.573170731707317,
+                      "5": 2.0365853658536586,
+                      "6": 2.6097560975609757,
+                      "7": 0.012195121951219513,
+                      "8": 0.012195121951219513,
+                      "9": 1.524390243902439,
+                      "10": 0.10975609756097561,
+                      "11": 1.0121951219512195,
+                      "12": {
+                        "source": "0.0",
+                        "parsedValue": 0
+                      },
+                      "13": 5.621951219512195,
+                      "14": 13.060975609756097,
+                      "15": 1.1585365853658536,
+                      "16": 1.7073170731707317,
+                      "17": 3.8902439024390243,
+                      "18": 9.341463414634147,
+                      "19": 0.43043884,
+                      "20": 0.67857143,
+                      "21": 0.41644909,
+                      "22": 0.57936508,
+                      "23": 7.439024390243903,
+                      "24": 0.5487804878048781,
+                      "25": 5.451219512195122,
+                      "26": 1.69512195,
+                      "27": 0.06097561,
+                      "28": 27.86585366,
+                      "29": 16.29268293,
+                      "30": 2.6097561,
+                      "31": 0.8902439,
+                      "32": 1.01219512,
+                      "33": 3.8902439,
+                      "34": 0.58468271,
+                      "35": 1.6746988,
+                      "36": 0.87951807,
+                      "37": 0.012195121951219513,
+                      "38": {
+                        "source": "0.0",
+                        "parsedValue": 0
+                      },
+                      "39": {
+                        "source": "0.0",
+                        "parsedValue": 0
+                      },
+                      "40": 27.865853658536587,
+                      "41": 0.21951219512195122,
+                      "42": {
+                        "source": "82.0",
+                        "parsedValue": 82
+                      },
+                      "43": 0.5365853658536586,
+                      "44": 0.13071895
+                    },
+                    "externalId": "2025",
+                    "id": "002025",
+                    "proTeamId": 0,
+                    "scoringPeriodId": 0,
+                    "seasonId": 2025,
+                    "statSourceId": 0,
+                    "statSplitTypeId": 0,
+                    "stats": {
+                      "0": {
+                        "source": "1336.0",
+                        "parsedValue": 1336
+                      },
+                      "1": {
+                        "source": "5.0",
+                        "parsedValue": 5
+                      },
+                      "2": {
+                        "source": "73.0",
+                        "parsedValue": 73
+                      },
+                      "3": {
+                        "source": "139.0",
+                        "parsedValue": 139
+                      },
+                      "4": {
+                        "source": "47.0",
+                        "parsedValue": 47
+                      },
+                      "5": {
+                        "source": "167.0",
+                        "parsedValue": 167
+                      },
+                      "6": {
+                        "source": "214.0",
+                        "parsedValue": 214
+                      },
+                      "7": {
+                        "source": "1.0",
+                        "parsedValue": 1
+                      },
+                      "8": {
+                        "source": "1.0",
+                        "parsedValue": 1
+                      },
+                      "9": {
+                        "source": "125.0",
+                        "parsedValue": 125
+                      },
+                      "10": {
+                        "source": "9.0",
+                        "parsedValue": 9
+                      },
+                      "11": {
+                        "source": "83.0",
+                        "parsedValue": 83
+                      },
+                      "12": {
+                        "source": "0.0",
+                        "parsedValue": 0
+                      },
+                      "13": {
+                        "source": "461.0",
+                        "parsedValue": 461
+                      },
+                      "14": {
+                        "source": "1071.0",
+                        "parsedValue": 1071
+                      },
+                      "15": {
+                        "source": "95.0",
+                        "parsedValue": 95
+                      },
+                      "16": {
+                        "source": "140.0",
+                        "parsedValue": 140
+                      },
+                      "17": {
+                        "source": "319.0",
+                        "parsedValue": 319
+                      },
+                      "18": {
+                        "source": "766.0",
+                        "parsedValue": 766
+                      },
+                      "19": 0.43043884,
+                      "20": 0.67857143,
+                      "21": 0.41644909,
+                      "22": 0.57936508,
+                      "23": {
+                        "source": "610.0",
+                        "parsedValue": 610
+                      },
+                      "24": {
+                        "source": "45.0",
+                        "parsedValue": 45
+                      },
+                      "25": {
+                        "source": "447.0",
+                        "parsedValue": 447
+                      },
+                      "26": 1.69512195,
+                      "27": 0.06097561,
+                      "28": 27.86585366,
+                      "29": 16.29268293,
+                      "30": 2.6097561,
+                      "31": 0.8902439,
+                      "32": 1.01219512,
+                      "33": 3.8902439,
+                      "34": 0.58468271,
+                      "35": 1.6746988,
+                      "36": 0.87951807,
+                      "37": {
+                        "source": "1.0",
+                        "parsedValue": 1
+                      },
+                      "38": {
+                        "source": "0.0",
+                        "parsedValue": 0
+                      },
+                      "39": {
+                        "source": "0.0",
+                        "parsedValue": 0
+                      },
+                      "40": {
+                        "source": "2285.0",
+                        "parsedValue": 2285
+                      },
+                      "41": {
+                        "source": "18.0",
+                        "parsedValue": 18
+                      },
+                      "42": {
+                        "source": "82.0",
+                        "parsedValue": 82
+                      },
+                      "43": {
+                        "source": "44.0",
+                        "parsedValue": 44
+                      },
+                      "44": 0.13071895
+                    }
+                  },
+                  {
+                    "externalId": "2026",
+                    "id": "002026",
+                    "proTeamId": 0,
+                    "scoringPeriodId": 0,
+                    "seasonId": 2026,
+                    "statSourceId": 0,
+                    "statSplitTypeId": 0,
+                    "stats": {}
+                  },
+                  {
+                    "externalId": "2026",
+                    "id": "032026",
+                    "proTeamId": 0,
+                    "scoringPeriodId": 0,
+                    "seasonId": 2026,
+                    "statSourceId": 0,
+                    "statSplitTypeId": 3,
+                    "stats": {}
+                  },
+                  {
+                    "externalId": "2026",
+                    "id": "022026",
+                    "proTeamId": 0,
+                    "scoringPeriodId": 0,
+                    "seasonId": 2026,
+                    "statSourceId": 0,
+                    "statSplitTypeId": 2,
+                    "stats": {}
+                  },
+                  {
+                    "externalId": "2026",
+                    "id": "012026",
+                    "proTeamId": 0,
+                    "scoringPeriodId": 0,
+                    "seasonId": 2026,
+                    "statSourceId": 0,
+                    "statSplitTypeId": 1,
+                    "stats": {}
+                  },
+                  {
+                    "averageStats": {
+                      "0": 9.734177215189874,
+                      "1": 0.10126582278481013,
+                      "2": 0.5949367088607594,
+                      "3": 1.2025316455696202,
+                      "6": {
+                        "source": "3.0",
+                        "parsedValue": 3
+                      },
+                      "11": 0.5949367088607594,
+                      "13": 3.4936708860759493,
+                      "14": 8.20253164556962,
+                      "15": 0.3670886075949367,
+                      "16": 0.5063291139240507,
+                      "17": 2.3797468354430378,
+                      "18": {
+                        "source": "6.0",
+                        "parsedValue": 6
+                      },
+                      "19": 0.426,
+                      "20": 0.745,
+                      "21": 0.396,
+                      "23": 4.708860759493671,
+                      "24": 0.13924050632911392,
+                      "25": 3.6202531645569622,
+                      "26": 1.2,
+                      "27": 0.1,
+                      "28": 23.7,
+                      "29": 9.7349,
+                      "30": {
+                        "source": "3.0",
+                        "parsedValue": 3
+                      },
+                      "31": 0.6,
+                      "32": 0.6,
+                      "33": {
+                        "source": "2.0",
+                        "parsedValue": 2
+                      },
+                      "34": 0.41,
+                      "35": 2.02,
+                      "36": {
+                        "source": "1.0",
+                        "parsedValue": 1
+                      },
+                      "40": 23.7,
+                      "42": {
+                        "source": "79.0",
+                        "parsedValue": 79
+                      }
+                    },
+                    "externalId": "2025",
+                    "id": "102025",
+                    "proTeamId": 0,
+                    "scoringPeriodId": 0,
+                    "seasonId": 2025,
+                    "statSourceId": 1,
+                    "statSplitTypeId": 0,
+                    "stats": {
+                      "0": {
+                        "source": "769.0",
+                        "parsedValue": 769
+                      },
+                      "1": {
+                        "source": "8.0",
+                        "parsedValue": 8
+                      },
+                      "2": {
+                        "source": "47.0",
+                        "parsedValue": 47
+                      },
+                      "3": {
+                        "source": "95.0",
+                        "parsedValue": 95
+                      },
+                      "6": {
+                        "source": "237.0",
+                        "parsedValue": 237
+                      },
+                      "11": {
+                        "source": "47.0",
+                        "parsedValue": 47
+                      },
+                      "13": {
+                        "source": "276.0",
+                        "parsedValue": 276
+                      },
+                      "14": {
+                        "source": "648.0",
+                        "parsedValue": 648
+                      },
+                      "15": {
+                        "source": "29.0",
+                        "parsedValue": 29
+                      },
+                      "16": {
+                        "source": "40.0",
+                        "parsedValue": 40
+                      },
+                      "17": {
+                        "source": "188.0",
+                        "parsedValue": 188
+                      },
+                      "18": {
+                        "source": "474.0",
+                        "parsedValue": 474
+                      },
+                      "19": 0.426,
+                      "20": 0.745,
+                      "21": 0.396,
+                      "23": {
+                        "source": "372.0",
+                        "parsedValue": 372
+                      },
+                      "24": {
+                        "source": "11.0",
+                        "parsedValue": 11
+                      },
+                      "25": {
+                        "source": "286.0",
+                        "parsedValue": 286
+                      },
+                      "26": 1.2,
+                      "27": 0.1,
+                      "28": 23.7,
+                      "29": 9.7349,
+                      "30": {
+                        "source": "3.0",
+                        "parsedValue": 3
+                      },
+                      "31": 0.6,
+                      "32": 0.6,
+                      "33": {
+                        "source": "2.0",
+                        "parsedValue": 2
+                      },
+                      "34": 0.41,
+                      "35": 2.02,
+                      "36": {
+                        "source": "1.0",
+                        "parsedValue": 1
+                      },
+                      "40": 1872.3,
+                      "42": {
+                        "source": "79.0",
+                        "parsedValue": 79
+                      }
+                    }
+                  },
+                  {
+                    "externalId": "2026",
+                    "id": "102026",
+                    "proTeamId": 0,
+                    "scoringPeriodId": 0,
+                    "seasonId": 2026,
+                    "statSourceId": 1,
+                    "statSplitTypeId": 0,
+                    "stats": {}
+                  }
+                ],
+                "universeId": 0
+              }
+            }},
+          {
+            "playerId": 4066328,
+            "playerPoolEntry": {
+              "id": 4066328,
+              "keeperValue": 22,
+              "onTeamId": 11,
+              "player": {
+                "firstName": "Jarrett",
+                "fullName": "Jarrett Allen",
+                "id": 4066328,
+                "lastName": "Allen",
+                "ownership": {
+                  "auctionValueAverage": 10.19,
+                  "averageDraftPosition": 54.82,
+                  "percentChange": 0.29,
+                  "percentOwned": 92.49,
+                  "percentStarted": 83.48
+                }
+              }
+            }},
+          {
+            "playerId": 4433255,
+            "playerPoolEntry": {
+              "id": 4433255,
+              "keeperValue": 21,
+              "onTeamId": 11,
+              "player": {
+                "firstName": "Chet",
+                "fullName": "Chet Holmgren",
+                "id": 4433255,
+                "lastName": "Holmgren",
+                "ownership": {
+                  "auctionValueAverage": 24.29,
+                  "averageDraftPosition": 40.42,
+                  "percentChange": 0.02,
+                  "percentOwned": 98.26,
+                  "percentStarted": 92.32
+                }
+              }
+            }},
+          {
+            "playerId": 4683778,
+            "playerPoolEntry": {
+              "id": 4683778,
+              "keeperValue": 8,
+              "onTeamId": 11,
+              "player": {
+                "firstName": "Jared",
+                "fullName": "Jared McCain",
+                "id": 4683778,
+                "lastName": "McCain",
+                "ownership": {
+                  "auctionValueAverage": 0.33,
+                  "averageDraftPosition": 138.11,
+                  "percentChange": -0.42,
+                  "percentOwned": 25.24,
+                  "percentStarted": 5.02
+                }
+              }
+            }},
+          {
+            "playerId": 4397014,
+            "playerPoolEntry": {
+              "id": 4397014,
+              "keeperValue": 6,
+              "onTeamId": 11,
+              "player": {
+                "active": true,
+                "defaultPositionId": 2,
+                "eligibleSlots": [1, 5, 7, 8, 11, 12, 13],
+                "firstName": "Quentin",
+                "fullName": "Quentin Grimes",
+                "id": 4397014,
+                "injured": false,
+                "injuryStatus": "DAY_TO_DAY",
+                "lastName": "Grimes",
+                "lastNewsDate": 1760118201000,
+                "ownership": {
+                  "auctionValueAverage": 0.23,
+                  "averageDraftPosition": 139.6,
+                  "percentChange": 0.73,
+                  "percentOwned": 12.73,
+                  "percentStarted": 3.09
+                },
+                "proTeamId": 20
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "DL",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [
+          3908809, 4395712, 4277813, 4433621, 4432573, 4845367
+        ]
+      },
+      "id": 12,
+      "isActive": false,
+      "name": "Dusk Lions",
+      "owners": ["{759DE964-CA02-4EE7-ACFD-62EE77A059B1}"],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 4432573,
+            "playerPoolEntry": {
+              "id": 4432573,
+              "keeperValue": 19,
+              "onTeamId": 12,
+              "player": {
+                "firstName": "Paolo",
+                "fullName": "Paolo Banchero",
+                "id": 4432573,
+                "lastName": "Banchero",
+                "ownership": {
+                  "auctionValueAverage": 27.65,
+                  "averageDraftPosition": 28.56,
+                  "percentChange": -0.01,
+                  "percentOwned": 99.58,
+                  "percentStarted": 97.48
+                }
+              }
+            }},
+          {
+            "playerId": 4845367,
+            "playerPoolEntry": {
+              "id": 4845367,
+              "keeperValue": 10,
+              "onTeamId": 12,
+              "player": {
+                "firstName": "Stephon",
+                "fullName": "Stephon Castle",
+                "id": 4845367,
+                "lastName": "Castle",
+                "ownership": {
+                  "auctionValueAverage": 1.96,
+                  "averageDraftPosition": 108.54,
+                  "percentChange": 0.53,
+                  "percentOwned": 70.83,
+                  "percentStarted": 33.28
+                }
+              }
+            }},
+          {
+            "playerId": 4433621,
+            "playerPoolEntry": {
+              "id": 4433621,
+              "keeperValue": 18,
+              "onTeamId": 12,
+              "player": {
+                "firstName": "Jalen",
+                "fullName": "Jalen Duren",
+                "id": 4433621,
+                "lastName": "Duren",
+                "ownership": {
+                  "auctionValueAverage": 7.33,
+                  "averageDraftPosition": 71.08,
+                  "percentChange": 0.45,
+                  "percentOwned": 84.61,
+                  "percentStarted": 75.4
+                }
+              }
+            }},
+          {
+            "playerId": 4395712,
+            "playerPoolEntry": {
+              "id": 4395712,
+              "keeperValue": 5,
+              "onTeamId": 12,
+              "player": {
+                "firstName": "Andrew",
+                "fullName": "Andrew Nembhard",
+                "id": 4395712,
+                "lastName": "Nembhard",
+                "ownership": {
+                  "auctionValueAverage": 3.59,
+                  "averageDraftPosition": 97.25,
+                  "percentChange": 1.59,
+                  "percentOwned": 67.4,
+                  "percentStarted": 36.22
+                }
+              }
+            }},
+          {
+            "playerId": 4277813,
+            "playerPoolEntry": {
+              "id": 4277813,
+              "keeperValue": 3,
+              "onTeamId": 12,
+              "player": {
+                "firstName": "Herbert",
+                "fullName": "Herbert Jones",
+                "id": 4277813,
+                "lastName": "Jones",
+                "ownership": {
+                  "auctionValueAverage": 0.78,
+                  "averageDraftPosition": 138.53,
+                  "percentChange": 0.11,
+                  "percentOwned": 21.43,
+                  "percentStarted": 4.4
+                }
+              }
+            }},
+          {
+            "playerId": 3908809,
+            "playerPoolEntry": {
+              "id": 3908809,
+              "keeperValue": 36,
+              "onTeamId": 12,
+              "player": {
+                "firstName": "Donovan",
+                "fullName": "Donovan Mitchell",
+                "id": 3908809,
+                "lastName": "Mitchell",
+                "ownership": {
+                  "auctionValueAverage": 35.08,
+                  "averageDraftPosition": 22.3,
+                  "percentChange": 0.01,
+                  "percentOwned": 99.85,
+                  "percentStarted": 98.79
+                }
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "VVV",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [
+          4433287, 4869342, 3908845, 5105623, 4431678, 4711272
+        ]
+      },
+      "id": 14,
+      "isActive": false,
+      "name": "Venomous Vicious Vipers",
+      "owners": ["{C64D0C89-0439-4251-BADE-811DEA058414}"],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 4431678,
+            "playerPoolEntry": {
+              "id": 4431678,
+              "keeperValue": 17,
+              "onTeamId": 14,
+              "player": {
+                "firstName": "Tyrese",
+                "fullName": "Tyrese Maxey",
+                "id": 4431678,
+                "lastName": "Maxey",
+                "ownership": {
+                  "auctionValueAverage": 39.49,
+                  "averageDraftPosition": 20.71,
+                  "percentChange": 0.03,
+                  "percentOwned": 99.51,
+                  "percentStarted": 97.67
+                }
+              }
+            }},
+          {
+            "playerId": 5105623,
+            "playerPoolEntry": {
+              "id": 5105623,
+              "keeperValue": 1,
+              "onTeamId": 14,
+              "player": {
+                "firstName": "Kel'el",
+                "fullName": "Kel'el Ware",
+                "id": 5105623,
+                "lastName": "Ware",
+                "ownership": {
+                  "auctionValueAverage": 1.71,
+                  "averageDraftPosition": 122.63,
+                  "percentChange": 2.58,
+                  "percentOwned": 45.07,
+                  "percentStarted": 12.43
+                }
+              }
+            }},
+          {
+            "playerId": 4711272,
+            "playerPoolEntry": {
+              "id": 4711272,
+              "keeperValue": 1,
+              "onTeamId": 14,
+              "player": {
+                "active": true,
+                "defaultPositionId": 2,
+                "eligibleSlots": [1, 5, 7, 8, 11, 12, 13],
+                "firstName": "Reed",
+                "fullName": "Reed Sheppard",
+                "id": 4711272,
+                "injured": false,
+                "injuryStatus": "ACTIVE",
+                "lastName": "Sheppard",
+                "lastNewsDate": 1760020891000,
+                "ownership": {
+                  "auctionValueAverage": 1.84,
+                  "averageDraftPosition": 118.23,
+                  "percentChange": 6.1,
+                  "percentOwned": 31.23,
+                  "percentStarted": 20.43
+                },
+                "proTeamId": 10
+              }
+            }},
+          {
+            "playerId": 4869342,
+            "playerPoolEntry": {
+              "id": 4869342,
+              "keeperValue": 8,
+              "onTeamId": 14,
+              "player": {
+                "firstName": "Dyson",
+                "fullName": "Dyson Daniels",
+                "id": 4869342,
+                "lastName": "Daniels",
+                "ownership": {
+                  "auctionValueAverage": 16.21,
+                  "averageDraftPosition": 47.6,
+                  "percentChange": 0.35,
+                  "percentOwned": 93.18,
+                  "percentStarted": 85.22
+                }
+              }
+            }},
+          {
+            "playerId": 4433287,
+            "playerPoolEntry": {
+              "id": 4433287,
+              "keeperValue": 12,
+              "onTeamId": 14,
+              "player": {
+                "firstName": "Brandon",
+                "fullName": "Brandon Miller",
+                "id": 4433287,
+                "lastName": "Miller",
+                "ownership": {
+                  "auctionValueAverage": 7.13,
+                  "averageDraftPosition": 97.61,
+                  "percentChange": 0.15,
+                  "percentOwned": 79.78,
+                  "percentStarted": 57.58
+                }
+              }
+            }},
+          {
+            "playerId": 3908845,
+            "playerPoolEntry": {
+              "id": 3908845,
+              "keeperValue": 5,
+              "onTeamId": 14,
+              "player": {
+                "firstName": "John",
+                "fullName": "John Collins",
+                "id": 3908845,
+                "lastName": "Collins",
+                "ownership": {
+                  "auctionValueAverage": 2.68,
+                  "averageDraftPosition": 101.39,
+                  "percentChange": 0.2,
+                  "percentOwned": 78.91,
+                  "percentStarted": 63.38
+                }
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "CCT",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [
+          4279888, 4066383, 4684742, 4278104, 4432174, 3934673
+        ]
+      },
+      "id": 15,
+      "isActive": false,
+      "name": "Cambrai City",
+      "owners": ["{3BBEEEA5-CFDD-49AC-AC34-EBA22E8ADFCE}"],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 4278104,
+            "playerPoolEntry": {
+              "id": 4278104,
+              "keeperValue": 17,
+              "onTeamId": 15,
+              "player": {
+                "firstName": "Michael",
+                "fullName": "Michael Porter Jr.",
+                "id": 4278104,
+                "lastName": "Porter Jr.",
+                "ownership": {
+                  "auctionValueAverage": 8.7,
+                  "averageDraftPosition": 58.2,
+                  "percentChange": 0.56,
+                  "percentOwned": 89.45,
+                  "percentStarted": 81.58
+                }
+              }
+            }},
+          {
+            "playerId": 4432174,
+            "playerPoolEntry": {
+              "id": 4432174,
+              "keeperValue": 11,
+              "onTeamId": 15,
+              "player": {
+                "firstName": "Cam",
+                "fullName": "Cam Thomas",
+                "id": 4432174,
+                "lastName": "Thomas",
+                "ownership": {
+                  "auctionValueAverage": 3.37,
+                  "averageDraftPosition": 98.74,
+                  "percentChange": 0.33,
+                  "percentOwned": 79.45,
+                  "percentStarted": 58.31
+                }
+              }
+            }},
+          {
+            "playerId": 4066383,
+            "playerPoolEntry": {
+              "id": 4066383,
+              "keeperValue": 23,
+              "onTeamId": 15,
+              "player": {
+                "firstName": "Miles",
+                "fullName": "Miles Bridges",
+                "id": 4066383,
+                "lastName": "Bridges",
+                "ownership": {
+                  "auctionValueAverage": 8.98,
+                  "averageDraftPosition": 60.44,
+                  "percentChange": 0.21,
+                  "percentOwned": 91.96,
+                  "percentStarted": 84.61
+                }
+              }
+            }},
+          {
+            "playerId": 3934673,
+            "playerPoolEntry": {
+              "id": 3934673,
+              "keeperValue": 1,
+              "onTeamId": 15,
+              "player": {
+                "firstName": "Donte",
+                "fullName": "Donte DiVincenzo",
+                "id": 3934673,
+                "lastName": "DiVincenzo",
+                "ownership": {
+                  "auctionValueAverage": 1.04,
+                  "averageDraftPosition": 129.44,
+                  "percentChange": 0.37,
+                  "percentOwned": 44.22,
+                  "percentStarted": 14.81
+                }
+              }
+            }},
+          {
+            "playerId": 4684742,
+            "playerPoolEntry": {
+              "id": 4684742,
+              "keeperValue": 11,
+              "onTeamId": 15,
+              "player": {
+                "firstName": "Ausar",
+                "fullName": "Ausar Thompson",
+                "id": 4684742,
+                "lastName": "Thompson",
+                "ownership": {
+                  "auctionValueAverage": 3.73,
+                  "averageDraftPosition": 104.84,
+                  "percentChange": 0.47,
+                  "percentOwned": 75.26,
+                  "percentStarted": 35.51
+                }
+              }
+            }},
+          {
+            "playerId": 4279888,
+            "playerPoolEntry": {
+              "id": 4279888,
+              "keeperValue": 43,
+              "onTeamId": 15,
+              "player": {
+                "firstName": "Ja",
+                "fullName": "Ja Morant",
+                "id": 4279888,
+                "lastName": "Morant",
+                "ownership": {
+                  "auctionValueAverage": 24.05,
+                  "averageDraftPosition": 31.98,
+                  "percentChange": 0.04,
+                  "percentOwned": 99.04,
+                  "percentStarted": 94.83
+                }
+              }
+            } }
+        ]
+      }
+    },
+    {
+      "abbrev": "MST",
+
+      "draftStrategy": {
+        "futureKeeperPlayerIds": [],
+        "keeperPlayerIds": [4278049, 6450, 4431680, 4431671, 5107897, 3064482]
+      },
+      "id": 16,
+      "isActive": false,
+      "name": "The Monstars",
+      "owners": ["{4694F412-284D-44D1-B6BB-3BF0660197DB}"],
+      "roster": {
+        "entries": [
+          {
+            "playerId": 6450,
+            "playerPoolEntry": {
+              "id": 6450,
+              "keeperValue": 27,
+              "onTeamId": 16,
+              "player": {
+                "firstName": "Kawhi",
+                "fullName": "Kawhi Leonard",
+                "id": 6450,
+                "lastName": "Leonard",
+                "ownership": {
+                  "auctionValueAverage": 10.07,
+                  "averageDraftPosition": 64.21,
+                  "percentChange": 0.22,
+                  "percentOwned": 92.38,
+                  "percentStarted": 83.86
+                }
+              }
+            }},
+          {
+            "playerId": 4431671,
+            "playerPoolEntry": {
+              "id": 4431671,
+              "keeperValue": 7,
+              "onTeamId": 16,
+              "player": {
+                "firstName": "Jaden",
+                "fullName": "Jaden McDaniels",
+                "id": 4431671,
+                "lastName": "McDaniels",
+                "ownership": {
+                  "auctionValueAverage": 1.76,
+                  "averageDraftPosition": 103.24,
+                  "percentChange": 0.46,
+                  "percentOwned": 74.42,
+                  "percentStarted": 47.1
+                }
+              }
+            }},
+          {
+            "playerId": 4431680,
+            "playerPoolEntry": {
+              "id": 4431680,
+              "keeperValue": 16,
+              "onTeamId": 16,
+              "player": {
+                "firstName": "Onyeka",
+                "fullName": "Onyeka Okongwu",
+                "id": 4431680,
+                "lastName": "Okongwu",
+                "ownership": {
+                  "auctionValueAverage": 3.52,
+                  "averageDraftPosition": 89.87,
+                  "percentChange": 0.61,
+                  "percentOwned": 76.81,
+                  "percentStarted": 52.72
+                }
+              }
+            }},
+          {
+            "playerId": 4278049,
+            "playerPoolEntry": {
+              "id": 4278049,
+              "keeperValue": 13,
+              "onTeamId": 16,
+              "player": {
+                "firstName": "Daniel",
+                "fullName": "Daniel Gafford",
+                "id": 4278049,
+                "lastName": "Gafford",
+                "ownership": {
+                  "auctionValueAverage": 1.59,
+                  "averageDraftPosition": 112.51,
+                  "percentChange": -1.5,
+                  "percentOwned": 71.64,
+                  "percentStarted": {
+                    "source": "50.0",
+                    "parsedValue": 50
+                  }
+                }
+              }
+            }},
+          {
+            "playerId": 5107897,
+            "playerPoolEntry": {
+              "id": 5107897,
+              "keeperValue": 6,
+              "onTeamId": 16,
+              "
+            }},
+          {
+            "playerId": 3064482,
+            "playerPoolEntry": {
+              "id": 3064482,
+              "keeperValue": 12,
+              "onTeamId": 16,
+              "
+            } }
+        ]
+      }
+    }
+  ]
+}
