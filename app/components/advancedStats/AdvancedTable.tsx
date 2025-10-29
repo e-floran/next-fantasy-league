@@ -39,10 +39,15 @@ export const AdvancedTable = ({
   const { dataByTeamId, teams } = useContext(DataContext);
 
   const averageGamesPlayed = useMemo(() => {
+    if (!teams || teams.length === 0) return 0;
+
     const gamesPlayed = teams
       .map((team) => team.roster)
       .flat()
       .map((player) => player.gamesPlayed);
+
+    if (gamesPlayed.length === 0) return 0;
+
     return gamesPlayed.reduce((a, b) => a + b) / gamesPlayed.length;
   }, [teams]);
 
@@ -83,6 +88,8 @@ export const AdvancedTable = ({
   );
 
   const flatPlayers = useMemo(() => {
+    if (!teams || teams.length === 0) return [];
+
     return teams
       .map((team) => {
         const teamData = dataByTeamId.get(team.id);

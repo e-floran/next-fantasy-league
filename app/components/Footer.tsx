@@ -42,23 +42,14 @@ export const Footer = (): ReactElement => {
 
   return (
     <footer style={styles.footer}>
-      {/* {isLocal && (
-        <NavButton
-          buttonIcon={SystemUpdateAltIcon}
-          onClickButton={() => dailyUpdate(setIsUpdating)}
-          navigateTo={"#"}
-        />
-      )} */}
       <a href="https://fantasy.espn.com/basketball/league?leagueId=3409">
         Fantasy league BBF
       </a>
       <article style={styles.updateContainer}>
-        <p>Mise à jour des données : {lastUpdate.toLocaleString()}</p>
-        {/* <NavButton
-          buttonIcon={AutorenewIcon}
-          onClickButton={() => dailyUpdate(setIsUpdating, handleDataRefresh)}
-          navigateTo={"#"}
-        /> */}
+        <p>
+          Mise à jour des données :{" "}
+          {lastUpdate ? lastUpdate.toLocaleString() : "Chargement..."}
+        </p>
       </article>
     </footer>
   );

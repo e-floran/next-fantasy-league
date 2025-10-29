@@ -22,10 +22,19 @@ export interface DetailsProps {
 }
 
 export default function Home(): ReactElement {
-  const { activeTeamId, dataByTeamId } = useContext(DataContext);
+  const { activeTeamId, dataByTeamId, teams } = useContext(DataContext);
   const activeTeamData = useMemo(() => {
     return dataByTeamId.get(activeTeamId);
   }, [activeTeamId, dataByTeamId]);
+
+  // Show loading state if no teams are loaded yet
+  if (!teams || teams.length === 0) {
+    return (
+      <main>
+        <p>Chargement des données...</p>
+      </main>
+    );
+  }
 
   return (
     <main>

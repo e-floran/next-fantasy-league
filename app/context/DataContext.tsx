@@ -39,7 +39,7 @@ export const DataProvider = ({ children }: { children: ReactElement }) => {
   const [unpickablePlayers, setUnpickablePlayers] = useState<
     UnpickablePlayer[]
   >([]);
-  const [lastUpdate, setLastUpdate] = useState<Date>(new Date());
+  const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
   const [isUpdating, setIsUpdating] = useState(false);
 
   const dataByTeamId = useMemo(() => {
@@ -54,7 +54,8 @@ export const DataProvider = ({ children }: { children: ReactElement }) => {
       return data;
     } catch (error) {
       console.error("Error fetching teams:", error);
-      throw error;
+      // Return empty data instead of throwing
+      return { teams: [], unpickablePlayers: [] };
     }
   };
 
@@ -62,11 +63,14 @@ export const DataProvider = ({ children }: { children: ReactElement }) => {
     const loadData = async () => {
       try {
         const rostersData = await fetchTeamsData();
-        setTeams(rostersData.teams);
+        setTeams(rostersData.teams || []);
         setUnpickablePlayers(rostersData.unpickablePlayers || []);
-        setLastUpdate(new Date()); // You might want to store this in the database
+        setLastUpdate(new Date());
       } catch (error) {
         console.error("Error loading data:", error);
+        // Set empty arrays on error
+        setTeams([]);
+        setUnpickablePlayers([]);
       }
     };
 
