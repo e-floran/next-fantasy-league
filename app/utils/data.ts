@@ -100,8 +100,8 @@ const filterPlayerKeys = (rawPlayer: RawPlayer): Player => {
 const buildPlayerRaters = (
   rawRater: PlayerRatings | undefined
 ): PlayerCategoriesRaters => {
-  const output = basePlayerRaters;
-  if (rawRater) {
+  const output = { ...basePlayerRaters };
+  if (rawRater && rawRater.statRankings) {
     rawRater.statRankings.forEach((value) => {
       const key = RaterCategories.get(value.forStat);
       if (key) {
@@ -109,7 +109,26 @@ const buildPlayerRaters = (
       }
     });
   }
-  return { ...output };
+  return output;
+};
+
+// Add new function to convert database raters to application format
+const buildPlayerRatersFromDb = (dbRater: any): PlayerCategoriesRaters => {
+  if (!dbRater) {
+    return { ...basePlayerRaters };
+  }
+
+  return {
+    FG: dbRater.fg_rater || 0,
+    FT: dbRater.ft_rater || 0,
+    "3PM": dbRater.three_pm_rater || 0,
+    REB: dbRater.reb_rater || 0,
+    AST: dbRater.ast_rater || 0,
+    STL: dbRater.stl_rater || 0,
+    BLK: dbRater.blk_rater || 0,
+    TO: dbRater.to_rater || 0,
+    PTS: dbRater.pts_rater || 0,
+  };
 };
 
 const buildPlayerStats = (

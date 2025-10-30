@@ -7,7 +7,8 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "populate-db": "tsx --env-file=.env.local scripts/populateDatabase.ts"
+    "populate-db": "tsx --env-file=.env.local scripts/populateDatabase.ts",
+    "update-db": "tsx scripts/updateDatabase.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",

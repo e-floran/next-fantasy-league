@@ -73,14 +73,14 @@ export const RosterTable = ({
               style={styles.columnHeader}
               onClick={() => sortColumnByArgument("previousRater")}
             >
-              {"Rater 2024"}{" "}
+              {"Rater 2025"}{" "}
               {sortColumn === "previousRater" ? columnIcon : null}
             </th>
             <th
               style={styles.columnHeader}
               onClick={() => sortColumnByArgument("currentRater")}
             >
-              {"Rater 2025"} {sortColumn === "currentRater" ? columnIcon : null}
+              {"Rater 2026"} {sortColumn === "currentRater" ? columnIcon : null}
             </th>
             <th
               style={styles.columnHeader}

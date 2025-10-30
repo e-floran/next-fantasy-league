@@ -1,0 +1,33 @@
+name: Daily Database Update
+
+on:
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  update-database:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run database update script
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        run: npm run update-db
+
+      - name: Notify on failure
+        if: failure()
+        run: echo "Database update failed. Check the logs for details."
