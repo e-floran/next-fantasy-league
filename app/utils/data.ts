@@ -112,25 +112,6 @@ const buildPlayerRaters = (
   return output;
 };
 
-// Add new function to convert database raters to application format
-const buildPlayerRatersFromDb = (dbRater: any): PlayerCategoriesRaters => {
-  if (!dbRater) {
-    return { ...basePlayerRaters };
-  }
-
-  return {
-    FG: dbRater.fg_rater || 0,
-    FT: dbRater.ft_rater || 0,
-    "3PM": dbRater.three_pm_rater || 0,
-    REB: dbRater.reb_rater || 0,
-    AST: dbRater.ast_rater || 0,
-    STL: dbRater.stl_rater || 0,
-    BLK: dbRater.blk_rater || 0,
-    TO: dbRater.to_rater || 0,
-    PTS: dbRater.pts_rater || 0,
-  };
-};
-
 const buildPlayerStats = (
   rawStats: RawPlayerStats | undefined
 ): PlayerDetailedStats => {

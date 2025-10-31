@@ -351,8 +351,8 @@ async function updateDatabase(
 
 async function main() {
   try {
-    console.log('🚀 Starting database update process...\n');
-    console.log('Environment check:', {
+    console.log("🚀 Starting database update process...\n");
+    console.log("Environment check:", {
       hasSupabaseUrl: !!process.env.NEXT_PUBLIC_SUPABASE_URL,
       hasSupabaseKey: !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
       nodeEnv: process.env.NODE_ENV,
@@ -367,7 +367,7 @@ async function main() {
       await fetchFromESPN();
 
     // Process roster changes
-    console.log('\n🔄 Processing roster changes...');
+    console.log("\n🔄 Processing roster changes...");
     const updatedTeams = addNewPlayers(
       previousTeams,
       newRosters,
@@ -376,26 +376,26 @@ async function main() {
     );
 
     // Check unpickable players status
-    console.log('\n🏥 Checking unpickable players status...');
+    console.log("\n🏥 Checking unpickable players status...");
     const updatedUnpickables = await checkUnpickablePlayersStatus(
       unpickablePlayers
     );
 
     // Update database
-    console.log('\n💾 Updating database with fresh data...');
+    console.log("\n💾 Updating database with fresh data...");
     await updateDatabase(updatedTeams, updatedUnpickables);
 
-    console.log('\n✅ Database update completed successfully!');
+    console.log("\n✅ Database update completed successfully!");
     console.log(`📊 Final stats:`, {
       teams: updatedTeams.length,
       totalPlayers: updatedTeams.reduce((sum, t) => sum + t.roster.length, 0),
       unpickablePlayers: updatedUnpickables.length,
     });
-    
+
     // Exit with success code
     process.exit(0);
   } catch (error) {
-    console.error('❌ Error during update:', error);
+    console.error("❌ Error during update:", error);
     // Exit with error code
     process.exit(1);
   }
