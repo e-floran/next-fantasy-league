@@ -31,7 +31,7 @@ export async function getLastSeasonRaters() {
       },
     },
   };
-  const ratersUrl = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/fba/seasons/2024/segments/0/leagues/3409?scoringPeriodId=7&view=kona_player_info&view=mStatRatings`;
+  const ratersUrl = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/fba/seasons/2025/segments/0/leagues/3409?scoringPeriodId=7&view=kona_player_info&view=mStatRatings`;
   const ratersReq = new Request(ratersUrl);
   ratersReq.headers.set(
     "X-Fantasy-Filter",
@@ -62,5 +62,5 @@ export async function getLastSeasonRaters() {
     })
     .catch((error) => console.log(error));
 
-  downloadElement(raters, "newrater2024");
+  downloadElement(raters, "newrater2025");
 }

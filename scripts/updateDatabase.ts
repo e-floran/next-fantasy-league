@@ -276,41 +276,27 @@ async function updateDatabase(
         );
       }
 
-      // Update player raters (both seasons)
-      const ratersData = [
-        {
-          player_id: player.id,
-          season: "2025",
-          total_rater: player.currentRater,
-          fg_rater: player.categoriesRaters.FG,
-          ft_rater: player.categoriesRaters.FT,
-          three_pm_rater: player.categoriesRaters["3PM"],
-          reb_rater: player.categoriesRaters.REB,
-          ast_rater: player.categoriesRaters.AST,
-          stl_rater: player.categoriesRaters.STL,
-          blk_rater: player.categoriesRaters.BLK,
-          to_rater: player.categoriesRaters.TO,
-          pts_rater: player.categoriesRaters.PTS,
-        },
-        {
-          player_id: player.id,
-          season: "2024",
-          total_rater: player.previousRater,
-          fg_rater: player.previousCategoriesRaters.FG,
-          ft_rater: player.previousCategoriesRaters.FT,
-          three_pm_rater: player.previousCategoriesRaters["3PM"],
-          reb_rater: player.previousCategoriesRaters.REB,
-          ast_rater: player.previousCategoriesRaters.AST,
-          stl_rater: player.previousCategoriesRaters.STL,
-          blk_rater: player.previousCategoriesRaters.BLK,
-          to_rater: player.previousCategoriesRaters.TO,
-          pts_rater: player.previousCategoriesRaters.PTS,
-        },
-      ];
-
+      // Update ONLY current season raters (2026)
+      // Previous season data (2025) should not be modified by daily updates
       const { error: ratersError } = await supabase
         .from("player_raters")
-        .upsert(ratersData, { onConflict: "player_id,season" });
+        .upsert(
+          {
+            player_id: player.id,
+            season: CURRENT_SEASON.toString(),
+            total_rater: player.currentRater,
+            fg_rater: player.categoriesRaters.FG,
+            ft_rater: player.categoriesRaters.FT,
+            three_pm_rater: player.categoriesRaters["3PM"],
+            reb_rater: player.categoriesRaters.REB,
+            ast_rater: player.categoriesRaters.AST,
+            stl_rater: player.categoriesRaters.STL,
+            blk_rater: player.categoriesRaters.BLK,
+            to_rater: player.categoriesRaters.TO,
+            pts_rater: player.categoriesRaters.PTS,
+          },
+          { onConflict: "player_id,season" }
+        );
 
       if (ratersError) {
         console.error(
