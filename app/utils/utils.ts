@@ -137,10 +137,10 @@ export const getTeamTotals = (
   newSalariesByPlayerId: Map<number, number>,
   keepers: number[]
 ) => {
-  const rater2024 = team.roster
+  const rater2025 = team.roster
     .map((player) => player.previousRater)
     .reduce((partialSum, a) => partialSum + a, 0);
-  const rater2025 = team.roster
+  const rater2026 = team.roster
     .map((player) => player.currentRater)
     .reduce((partialSum, a) => partialSum + a, 0);
   const currentSalary = team.roster
@@ -160,7 +160,7 @@ export const getTeamTotals = (
 
   return {
     rater2025,
-    rater2024,
+    rater2026,
     currentSalary,
     projectedSalary,
     projectedKeepersSalaries,

@@ -139,8 +139,8 @@ export const RosterTable = ({
         <tfoot>
           <tr>
             <td>Totaux</td>
-            <td>{activeTeamData?.totals?.rater2024.toFixed(2)}</td>
             <td>{activeTeamData?.totals?.rater2025.toFixed(2)}</td>
+            <td>{activeTeamData?.totals?.rater2026.toFixed(2)}</td>
             <td>-</td>
             <td>{activeTeamData?.totals?.currentSalary}</td>
             <td>{activeTeamData?.totals?.projectedSalary}</td>

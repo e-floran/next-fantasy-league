@@ -74,12 +74,12 @@ export async function GET() {
 }
 
 function transformPlayer(dbPlayer: any) {
-  // Find current season (2025) and previous season (2024) raters
+  // Find current season (2026) and previous season (2025) raters
   const currentRater = dbPlayer.player_raters?.find(
-    (r: any) => r.season === "2025"
+    (r: any) => r.season === "2026"
   );
   const previousRater = dbPlayer.player_raters?.find(
-    (r: any) => r.season === "2024"
+    (r: any) => r.season === "2025"
   );
   const stats = dbPlayer.player_stats?.[0];
 

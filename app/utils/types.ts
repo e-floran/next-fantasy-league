@@ -69,7 +69,7 @@ export interface TeamDetailsData {
   newSalariesByPlayerId: Map<number, number>;
   totals: {
     rater2025: number;
-    rater2024: number;
+    rater2026: number;
     currentSalary: number;
     projectedSalary: number;
     projectedKeepersSalaries: number;
