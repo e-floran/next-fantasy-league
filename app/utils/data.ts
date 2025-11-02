@@ -351,12 +351,12 @@ export const checkUnpickablePlayersStatus = async (
 
   for (const player of outputPlayers) {
     if (player.outForSeason) {
-      console.log(`⏭️ Skipping ${player.name} (out for season)`);
+      console.log(`⏭️ Skipping ${player.fullName} (out for season)`);
       continue;
     }
 
     console.log(
-      `🔍 Checking injury status for ${player.name} (ID: ${player.id})`
+      `🔍 Checking injury status for ${player.fullName} (ID: ${player.id})`
     );
     const checkStartTime = Date.now();
 
@@ -388,7 +388,7 @@ export const checkUnpickablePlayersStatus = async (
     await fetch(req)
       .then((response) => {
         console.log(
-          `✅ Player ${player.name} response (${
+          `✅ Player ${player.fullName} response (${
             Date.now() - checkStartTime
           }ms):`,
           response.status,
@@ -399,22 +399,22 @@ export const checkUnpickablePlayersStatus = async (
       .then((json: { players: RatedRawPlayer[] }) => {
         if (!json.players[0].player.injured) {
           console.log(
-            `🎉 ${player.name} is no longer injured - removing from unpickable list`
+            `🎉 ${player.fullName} is no longer injured - removing from unpickable list`
           );
           outputPlayers = outputPlayers.filter(
             (injuredPlayer) => injuredPlayer.id !== player.id
           );
         } else {
-          console.log(`🏥 ${player.name} is still injured`);
+          console.log(`🏥 ${player.fullName} is still injured`);
         }
       })
       .catch((error) => {
-        console.error(`❌ Failed to check ${player.name}:`, error);
+        console.error(`❌ Failed to check ${player.fullName}:`, error);
         console.error("🔍 Error details:", {
           message: error.message,
           stack: error.stack,
           playerId: player.id,
-          playerName: player.name,
+          playerName: player.fullName,
         });
       });
   }
@@ -423,7 +423,7 @@ export const checkUnpickablePlayersStatus = async (
     `✅ Unpickable players check completed - ${outputPlayers.length} players remaining`
   );
   return outputPlayers.sort((a, b) => {
-    return a.name.localeCompare(b.name);
+    return a.fullName.localeCompare(b.fullName);
   });
 };
 

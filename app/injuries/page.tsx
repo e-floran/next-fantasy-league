@@ -6,7 +6,7 @@ import { DataContext } from "../context/DataContext";
 
 export default function InjuryReport(): ReactElement {
   const { unpickablePlayers } = useContext(DataContext);
-
+  console.log("Unpickable Players:", unpickablePlayers);
   return (
     <main>
       <section>
@@ -21,7 +21,7 @@ export default function InjuryReport(): ReactElement {
             {unpickablePlayers.map((player) => (
               <tr key={player.id}>
                 <td style={player.outForSeason ? { color: "red" } : undefined}>
-                  {player.name}
+                  {player.fullName}
                 </td>
               </tr>
             ))}

@@ -130,7 +130,7 @@ export interface RawTeam {
 }
 
 export interface UnpickablePlayer {
-  name: string;
+  fullName: string;
   id: number;
   outForSeason?: boolean | undefined;
 }

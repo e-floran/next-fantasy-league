@@ -72,7 +72,7 @@ async function fetchFromDatabase(): Promise<{
     .filter((p) => p.is_unpickable)
     .map((p) => ({
       id: p.id,
-      name: p.full_name,
+      fullName: p.full_name,
       outForSeason: false, // This info needs to be fetched from ESPN
     }));
 
@@ -314,7 +314,7 @@ async function updateDatabase(
       {
         id: unpickable.id,
         team_id: null,
-        full_name: unpickable.name,
+        full_name: unpickable.fullName,
         salary: 1,
         games_played: 0,
         injured_spot: true,
