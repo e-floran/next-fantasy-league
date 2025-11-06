@@ -6,7 +6,6 @@ import { DataContext } from "../context/DataContext";
 
 export default function InjuryReport(): ReactElement {
   const { unpickablePlayers } = useContext(DataContext);
-  console.log("Unpickable Players:", unpickablePlayers);
   return (
     <main>
       <section>

@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "populate-db": "tsx --env-file=.env.local scripts/populateDatabase.ts",
-    "update-db": "tsx --env-file=.env.local scripts/updateDatabase.ts",
+    "update-db": "tsx scripts/updateDatabase.ts",
+    "manual-update-db": "tsx --env-file=.env.local scripts/updateDatabase.ts",
     "correct-rater-2025": "tsx --env-file=.env.local scripts/correctRater2025.ts"
   },
   "dependencies": {
