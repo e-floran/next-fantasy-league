@@ -208,6 +208,50 @@ async function updateDatabase(
   for (const team of updatedTeams) {
     console.log(`📝 Updating team ${team.id} (${team.name})...`);
 
+    // Get current player IDs on this team's roster
+    const newRosterPlayerIds = team.roster.map((p) => p.id);
+
+    // Find players that were on this team but are no longer in the roster (dropped players)
+    const { data: currentTeamPlayers, error: fetchError } = await supabase
+      .from("players")
+      .select("id")
+      .eq("team_id", team.id);
+
+    if (fetchError) {
+      console.error(
+        `❌ Error fetching current team players for team ${team.id}:`,
+        fetchError
+      );
+    } else if (currentTeamPlayers) {
+      const droppedPlayers = currentTeamPlayers.filter(
+        (p) => !newRosterPlayerIds.includes(p.id)
+      );
+
+      if (droppedPlayers.length > 0) {
+        console.log(
+          `🗑️  Removing ${droppedPlayers.length} dropped players from team ${team.id}`
+        );
+
+        for (const droppedPlayer of droppedPlayers) {
+          const { error: dropError } = await supabase
+            .from("players")
+            .update({ team_id: null })
+            .eq("id", droppedPlayer.id);
+
+          if (dropError) {
+            console.error(
+              `❌ Error removing player ${droppedPlayer.id} from team:`,
+              dropError
+            );
+          } else {
+            console.log(
+              `  ✅ Player ${droppedPlayer.id} removed from team roster`
+            );
+          }
+        }
+      }
+    }
+
     for (const player of team.roster) {
       console.log(`  👤 Updating player ${player.id} (${player.fullName})...`);
 
