@@ -27,7 +27,6 @@ export default function Home(): ReactElement {
     return dataByTeamId.get(activeTeamId);
   }, [activeTeamId, dataByTeamId]);
 
-  // Show loading state if no teams are loaded yet
   if (!teams || teams.length === 0) {
     return (
       <main>

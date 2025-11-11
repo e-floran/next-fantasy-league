@@ -309,7 +309,11 @@ export const addNewPlayers = (
         }
       } else {
         console.log(
-          `♻️ Existing keeper: ${newPlayer.playerPoolEntry?.player?.fullName}`
+          `♻️ Existing keeper: ${
+            newPlayer.playerPoolEntry?.player?.fullName
+          } - lineupSlotId: ${newPlayer.lineupSlotId}, injuredSpot: ${
+            newPlayer.lineupSlotId === 13
+          }`
         );
         const previousPlayer = oldTeam.roster.find(
           (oldPlayer) => oldPlayer.id === newPlayer.playerId

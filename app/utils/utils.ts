@@ -149,7 +149,9 @@ export const getTeamTotals = (
     .reduce((partialSum, a) => partialSum + a, 0);
 
   const stats: PlayerDetailedStats = reduceStats(
-    team.roster.map((player) => player.detailedStats!)
+    team.roster
+      .filter((player) => player.detailedStats != null)
+      .map((player) => player.detailedStats!)
   );
 
   const projectedSalary = getTeamTotalProjectedSalary(newSalariesByPlayerId);

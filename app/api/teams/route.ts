@@ -35,7 +35,7 @@ export async function GET() {
     ).select(`
         *,
         keeper_history (season),
-        player_stats (*),
+        player_stats!inner (*),
         player_raters (*)
       `);
 
@@ -81,7 +81,9 @@ function transformPlayer(dbPlayer: any) {
   const previousRater = dbPlayer.player_raters?.find(
     (r: any) => r.season === "2025"
   );
-  const stats = dbPlayer.player_stats?.[0];
+
+  // player_stats is a single object (one-to-one relationship)
+  const stats = dbPlayer.player_stats;
 
   return {
     id: dbPlayer.id,

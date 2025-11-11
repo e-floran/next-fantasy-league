@@ -2,7 +2,7 @@ This application is an helper tool for ESPN NBA fantasy leagues. On the main bra
 
 ## Index
 
-On the index page, all teams are listed. When clicking a team, the user can see the list of its players with the following informations : name, last season player rater, current season player rater, current streak of keeps between seasons, current salary, estimated salary for next season. It can aalso select potential keepers for next season to see how much total salary it would cost.
+On the index page, all teams are listed. When clicking a team, the user can see the list of its players with the following informations : name, last season player rater, current season player rater, current streak of keeps between seasons, current salary, estimated salary for next season. It can also select potential keepers for next season to see how much total salary it would cost.
 
 ## Trade
 
@@ -28,10 +28,25 @@ The history page ranks managers based on all previous seasons success.
 
 The rules page explains all the specific rules of this fantasy league.
 
-## Stored data
+## Data Storage
 
-- the data is stored in json fils in the src/assets folder. The src/assets/history/history.json file stores data for the history page, the src/assets/rater folder stores json files for each past season players rater, the src/assets/teams/rosters.json file stores both the injured players for the injuries page but mainly all the current rosters of the fantasy league with all the data for each player.
+The application uses a Supabase PostgreSQL database to store all fantasy league data. The database schema is defined in `database/schemas.sql` and includes the following tables:
 
-## Scripts
+- **teams**: Fantasy league teams with their names and abbreviations
+- **players**: All players with their team assignments, salaries, and game statistics
+- **keeper_history**: Historical record of which players were kept across seasons
+- **player_stats**: Detailed basketball statistics for each player (FGA, FGM, rebounds, assists, etc.)
+- **player_raters**: Season-specific player rating metrics for performance evaluation
 
-- the src/scripts/dailyUpdate.ts file is a script that needs to be manually launched every day to update the fantasy league rosters, tracking potential rosters moves (trades, free agents picks...).
+## Data Updates
+
+The database is automatically updated daily through GitHub Actions, which runs the `scripts/updateDatabase.ts` script. This script:
+
+1. Fetches current data from the Supabase database
+2. Retrieves fresh roster and statistics data from the ESPN Fantasy API
+3. Processes roster changes (trades, free agent pickups, drops)
+4. Updates player statistics and ratings for the current season
+5. Maintains historical data (previous season ratings remain unchanged)
+6. Tracks unpickable players (injured players banned from free agent pickups)
+
+The automation ensures that the application always displays up-to-date fantasy league information without manual intervention.
