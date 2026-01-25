@@ -13,25 +13,25 @@
     "correct-rater-2025": "tsx --env-file=.env.local scripts/correctRater2025.ts"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "@mui/icons-material": "^6.1.2",
-    "@mui/material": "^6.1.2",
-    "@supabase/supabase-js": "^2.77.0",
-    "lodash": "^4.17.21",
-    "next": "15.5.6",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.7",
+    "@mui/material": "^7.3.7",
+    "@supabase/supabase-js": "^2.91.1",
+    "lodash": "^4.17.23",
+    "next": "16.1.4",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/lodash": "^4.17.20",
-    "@types/node": "^20",
+    "@types/lodash": "^4.17.23",
+    "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.5.6",
-    "tsx": "^4.20.6",
+    "eslint-config-next": "16.1.4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
