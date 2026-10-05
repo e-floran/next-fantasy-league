@@ -23,7 +23,7 @@ import {
 } from "../app/utils/types";
 
 const LEAGUE_ID = 3409;
-const CURRENT_SEASON = 2026;
+const CURRENT_SEASON = 2027;
 const LAST_SEASON = CURRENT_SEASON - 1;
 
 async function fetchFromDatabase(): Promise<{
