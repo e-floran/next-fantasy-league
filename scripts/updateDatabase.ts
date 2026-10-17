@@ -207,9 +207,9 @@ async function updateDatabase(
   console.log("💾 Updating database...");
 
   // Create a map of player ID to ESPN data for quick lookup
-  const espnPlayerDataMap = new Map(
-    currentRaters.map((rater) => [rater.player.id, rater]),
-  );
+  // const espnPlayerDataMap = new Map(
+  //   currentRaters.map((rater) => [rater.player.id, rater]),
+  // );
 
   for (const team of updatedTeams) {
     console.log(`📝 Updating team ${team.id} (${team.name})...`);
@@ -262,15 +262,15 @@ async function updateDatabase(
       console.log(`  👤 Updating player ${player.id} (${player.fullName})...`);
 
       // Get current season games played from ESPN data
-      const espnPlayerData = espnPlayerDataMap.get(player.id);
-      const currentSeasonStats = espnPlayerData?.player?.stats?.find(
-        (stat: any) =>
-          stat.seasonId === CURRENT_SEASON && stat.statSourceId === 0,
-      );
-      const gamesPlayed =
-        currentSeasonStats?.appliedStats?.gamesPlayed ||
-        player.gamesPlayed ||
-        0;
+      // const espnPlayerData = espnPlayerDataMap.get(player.id);
+      // const currentSeasonStats = espnPlayerData?.player?.stats?.find(
+      //   (stat: any) =>
+      //     stat.seasonId === CURRENT_SEASON && stat.statSourceId === 0,
+      // );
+      // const gamesPlayed =
+      //   currentSeasonStats?.appliedStats?.gamesPlayed ||
+      //   player.gamesPlayed ||
+      //   0;
 
       // Update player basic info
       const { error: playerError } = await supabase.from("players").upsert(
@@ -279,7 +279,8 @@ async function updateDatabase(
           team_id: team.id,
           full_name: player.fullName,
           salary: player.salary,
-          games_played: gamesPlayed,
+          // games_played: gamesPlayed,
+          games_played: player.gamesPlayed,
           injured_spot: player.injuredSpot,
           is_unpickable: false,
           has_not_played_last_season: player.hasNotPlayedLastSeason || false,
