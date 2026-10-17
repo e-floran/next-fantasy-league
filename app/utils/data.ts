@@ -98,7 +98,7 @@ const filterPlayerKeys = (rawPlayer: RawPlayer): Player => {
 };
 
 const buildPlayerRaters = (
-  rawRater: PlayerRatings | undefined
+  rawRater: PlayerRatings | undefined,
 ): PlayerCategoriesRaters => {
   const output = { ...basePlayerRaters };
   if (rawRater && rawRater.statRankings) {
@@ -113,7 +113,7 @@ const buildPlayerRaters = (
 };
 
 const buildPlayerStats = (
-  rawStats: RawPlayerStats | undefined
+  rawStats: RawPlayerStats | undefined,
 ): PlayerDetailedStats => {
   const output = basePlayerStats;
   if (rawStats) {
@@ -131,16 +131,18 @@ const buildPlayerStats = (
 
 const addFreeAgent = (
   newPlayer: RawPlayer,
-  lastSeasonRaters: RatedRawPlayer[],
+  lastSeasonRaters: RatedRawPlayer[] | undefined,
   rosterToBuild: Player[],
   currentRater: PlayerRatings | undefined,
   gamesPlayed: number,
-  rawStats: RawPlayerStats | undefined
+  rawStats: RawPlayerStats | undefined,
 ) => {
+  console.log("Adding free agent");
   const parsedPlayer = filterPlayerKeys(newPlayer);
-  const previousRaters = lastSeasonRaters.find(
-    (ratedPlayer) => ratedPlayer.id === parsedPlayer.id
-  )?.ratings["0"];
+  const previousRaters = lastSeasonRaters
+    ? lastSeasonRaters.find((ratedPlayer) => ratedPlayer.id === parsedPlayer.id)
+        ?.ratings["0"]
+    : undefined;
   parsedPlayer.previousRater = previousRaters ? previousRaters.totalRating : 0;
   parsedPlayer.currentRater = currentRater?.totalRating ?? 0;
   parsedPlayer.gamesPlayed = gamesPlayed;
@@ -152,7 +154,7 @@ const addFreeAgent = (
 
 const initPlayersMap = (
   playersByPlayerId: Map<number, Player>,
-  previousRosters: Team[]
+  previousRosters: Team[],
 ) => {
   previousRosters.forEach((team) => {
     team.roster.forEach((player) => {
@@ -169,7 +171,7 @@ const addTradedPlayer = (
   lastSeasonRaters: RatedRawPlayer[],
   currentRater: PlayerRatings | undefined,
   gamesPlayed: number,
-  rawStats: RawPlayerStats | undefined
+  rawStats: RawPlayerStats | undefined,
 ) => {
   if (playersByPlayerId.size === 0) {
     initPlayersMap(playersByPlayerId, previousRosters);
@@ -182,7 +184,7 @@ const addTradedPlayer = (
       rosterToBuild,
       currentRater,
       gamesPlayed,
-      rawStats
+      rawStats,
     );
     return;
   }
@@ -200,11 +202,14 @@ export const addNewPlayers = (
   previousRosters: Team[],
   newRosters: RawTeam[],
   lastSeasonRaters: RatedRawPlayer[],
-  currentRaters: RatedRawPlayer[]
+  currentRaters: RatedRawPlayer[],
 ): Team[] => {
   console.log(
-    `🔄 Processing ${newRosters.length} new rosters against ${previousRosters.length} previous rosters`
+    `🔄 Processing ${newRosters.length} new rosters against ${previousRosters.length} previous rosters`,
   );
+  // console.log(
+  //   `📊 Last season raters: ${lastSeasonRaters} players, Current raters: ${currentRaters.length} players`,
+  // );
   const outputRosters: Team[] = [];
 
   const playersByPlayerId: Map<number, Player> = new Map();
@@ -218,7 +223,7 @@ export const addNewPlayers = (
 
     const newRoster = newTeam.roster.entries;
     const oldTeam: Team | undefined = previousRosters.find(
-      (team) => team.id === newTeam.id
+      (team) => team.id === newTeam.id,
     );
     if (!oldTeam) {
       console.warn(`⚠️ No matching previous team found for team ${newTeam.id}`);
@@ -239,46 +244,48 @@ export const addNewPlayers = (
         fullName: newPlayer.playerPoolEntry?.player?.fullName,
         acquisitionType: newPlayer.acquisitionType,
         isInOldTeam: oldTeam.roster.some(
-          (oldPlayer) => oldPlayer.id === newPlayer.playerId
+          (oldPlayer) => oldPlayer.id === newPlayer.playerId,
         ),
       });
 
       const currentRater = currentRaters.find(
-        (ratedPlayer) => ratedPlayer.id === newPlayer.playerId
+        (ratedPlayer) => ratedPlayer.id === newPlayer.playerId,
       );
 
       const gamesPlayed =
         newPlayer.playerPoolEntry.player.stats.find(
-          (statsEntry) => statsEntry.id === "002025"
+          (statsEntry) => statsEntry.id === "002025",
         )?.stats[42] ?? 0;
       const rawStats = newPlayer.playerPoolEntry.player.stats.find(
-        (statsEntry) => statsEntry.id === "002025"
+        (statsEntry) => statsEntry.id === "002025",
       )?.stats;
 
       const isPlayerInOldTeam = oldTeam.roster.some(
-        (oldPlayer) => oldPlayer.id === newPlayer.playerId
+        (oldPlayer) => oldPlayer.id === newPlayer.playerId,
       );
 
       if (!isPlayerInOldTeam) {
         console.log(
-          `🆕 New player ${newPlayer.playerId} (${newPlayer.playerPoolEntry?.player?.fullName}) - acquisition type: ${newPlayer.acquisitionType}`
+          `🆕 New player ${newPlayer.playerId} (${newPlayer.playerPoolEntry?.player?.fullName}) - acquisition type: ${newPlayer.acquisitionType}`,
         );
 
         if (newPlayer.acquisitionType === AcquisitionTypeEnum.ADD) {
           console.log(
-            `➕ Adding as free agent: ${newPlayer.playerPoolEntry?.player?.fullName}`
+            `➕ Adding as free agent: ${newPlayer.playerPoolEntry?.player?.fullName}`,
           );
           addFreeAgent(
             newPlayer,
-            lastSeasonRaters,
+            // lastSeasonRaters,
+            undefined,
             rosterToBuild,
-            currentRater?.ratings[0],
+            // currentRater?.ratings[0],
+            undefined,
             gamesPlayed,
-            rawStats
+            rawStats,
           );
         } else if (newPlayer.acquisitionType === AcquisitionTypeEnum.TRADE) {
           console.log(
-            `↔️ Adding as traded player: ${newPlayer.playerPoolEntry?.player?.fullName}`
+            `↔️ Adding as traded player: ${newPlayer.playerPoolEntry?.player?.fullName}`,
           );
           addTradedPlayer(
             newPlayer,
@@ -288,23 +295,25 @@ export const addNewPlayers = (
             lastSeasonRaters,
             currentRater?.ratings[0],
             gamesPlayed,
-            rawStats
+            rawStats,
           );
         } else if (newPlayer.acquisitionType === AcquisitionTypeEnum.DRAFT) {
           console.log(
-            `🎯 Adding drafted player: ${newPlayer.playerPoolEntry?.player?.fullName}`
+            `🎯 Adding drafted player: ${newPlayer.playerPoolEntry?.player?.fullName}`,
           );
           addFreeAgent(
             newPlayer,
-            lastSeasonRaters,
+            // lastSeasonRaters,
+            undefined,
             rosterToBuild,
-            currentRater?.ratings[0],
+            // currentRater?.ratings[0],
+            undefined,
             gamesPlayed,
-            rawStats
+            rawStats,
           );
         } else {
           console.log(
-            `❓ Unknown acquisition type for ${newPlayer.playerPoolEntry?.player?.fullName}: ${newPlayer.acquisitionType}`
+            `❓ Unknown acquisition type for ${newPlayer.playerPoolEntry?.player?.fullName}: ${newPlayer.acquisitionType}`,
           );
         }
       } else {
@@ -313,29 +322,34 @@ export const addNewPlayers = (
             newPlayer.playerPoolEntry?.player?.fullName
           } - lineupSlotId: ${newPlayer.lineupSlotId}, injuredSpot: ${
             newPlayer.lineupSlotId === 13
-          }`
+          }`,
         );
         const previousPlayer = oldTeam.roster.find(
-          (oldPlayer) => oldPlayer.id === newPlayer.playerId
+          (oldPlayer) => oldPlayer.id === newPlayer.playerId,
         );
+        // console.log(`🔍 Previous player data:`, { previousPlayer });
         if (previousPlayer) {
-          const previousRaters = lastSeasonRaters.find(
-            (ratedPlayer) => ratedPlayer.id === previousPlayer.id
-          )?.ratings["0"];
+          // const previousRaters = lastSeasonRaters.find(
+          //   (ratedPlayer) => ratedPlayer.id === previousPlayer.id,
+          // )?.ratings["0"];
+          // console.log(`🔍 Previous raters data:`, { previousRaters });
           rosterToBuild.push({
             ...previousPlayer,
             injuredSpot: newPlayer.lineupSlotId === 13,
-            currentRater: currentRater?.ratings[0].totalRating ?? 0,
+            // currentRater: currentRater?.ratings[0].totalRating ?? 0,
+            currentRater: 0,
             gamesPlayed,
-            categoriesRaters: buildPlayerRaters(currentRater?.ratings[0]),
-            previousCategoriesRaters: buildPlayerRaters(previousRaters),
+            // categoriesRaters: buildPlayerRaters(currentRater?.ratings[0]),
+            categoriesRaters: buildPlayerRaters(undefined),
+            // previousCategoriesRaters: buildPlayerRaters(previousRaters),
+            previousCategoriesRaters: buildPlayerRaters(undefined),
             detailedStats: buildPlayerStats(rawStats),
           });
         }
       }
     });
     console.log(
-      `✅ Team ${newTeam.id} final roster: ${rosterToBuild.length} players`
+      `✅ Team ${newTeam.id} final roster: ${rosterToBuild.length} players`,
     );
     outputRosters.push({ ...oldTeam, roster: rosterToBuild });
   });
@@ -347,7 +361,7 @@ export const addNewPlayers = (
 };
 
 export const checkUnpickablePlayersStatus = async (
-  players: UnpickablePlayer[]
+  players: UnpickablePlayer[],
 ) => {
   console.log(`🏥 Checking status of ${players.length} unpickable players...`);
   let outputPlayers = [...players];
@@ -360,7 +374,7 @@ export const checkUnpickablePlayersStatus = async (
     }
 
     console.log(
-      `🔍 Checking injury status for ${player.fullName} (ID: ${player.id})`
+      `🔍 Checking injury status for ${player.fullName} (ID: ${player.id})`,
     );
     const checkStartTime = Date.now();
 
@@ -386,7 +400,7 @@ export const checkUnpickablePlayersStatus = async (
     const req = new Request(url);
     req.headers.set(
       "X-Fantasy-Filter",
-      JSON.stringify(ratersHeaders["X-Fantasy-Filter"])
+      JSON.stringify(ratersHeaders["X-Fantasy-Filter"]),
     );
 
     await fetch(req)
@@ -396,17 +410,17 @@ export const checkUnpickablePlayersStatus = async (
             Date.now() - checkStartTime
           }ms):`,
           response.status,
-          response.statusText
+          response.statusText,
         );
         return response.json();
       })
       .then((json: { players: RatedRawPlayer[] }) => {
         if (!json.players[0].player.injured) {
           console.log(
-            `🎉 ${player.fullName} is no longer injured - removing from unpickable list`
+            `🎉 ${player.fullName} is no longer injured - removing from unpickable list`,
           );
           outputPlayers = outputPlayers.filter(
-            (injuredPlayer) => injuredPlayer.id !== player.id
+            (injuredPlayer) => injuredPlayer.id !== player.id,
           );
         } else {
           console.log(`🏥 ${player.fullName} is still injured`);
@@ -424,7 +438,7 @@ export const checkUnpickablePlayersStatus = async (
   }
 
   console.log(
-    `✅ Unpickable players check completed - ${outputPlayers.length} players remaining`
+    `✅ Unpickable players check completed - ${outputPlayers.length} players remaining`,
   );
   return outputPlayers.sort((a, b) => {
     return a.fullName.localeCompare(b.fullName);
@@ -485,7 +499,7 @@ export const buildHistoryMap = () => {
         if (historyUsersMap.has(owner)) {
           let data = historyByOwnerId.get(owner);
           const seasonPoints = buildSeasonRankingPoint(
-            team.rankCalculatedFinal
+            team.rankCalculatedFinal,
           );
           if (data) {
             data.seasonsRankings.push({
