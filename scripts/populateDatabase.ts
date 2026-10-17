@@ -3,17 +3,15 @@ import * as fs from "fs";
 import * as path from "path";
 
 // Initialize Supabase client
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_ANON_KEY;
 
 if (!supabaseUrl) {
-  throw new Error("Missing NEXT_PUBLIC_SUPABASE_URL environment variable.");
+  throw new Error("Missing SUPABASE_URL environment variable.");
 }
 
 if (!supabaseKey) {
-  throw new Error(
-    "Missing NEXT_PUBLIC_SUPABASE_ANON_KEY environment variable."
-  );
+  throw new Error("Missing SUPABASE_ANON_KEY environment variable.");
 }
 
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -83,7 +81,7 @@ async function populateDatabase() {
   // Read rosters.json
   const rostersPath = path.join(__dirname, "../app/assets/teams/rosters.json");
   const rostersData: RostersData = JSON.parse(
-    fs.readFileSync(rostersPath, "utf-8")
+    fs.readFileSync(rostersPath, "utf-8"),
   );
 
   try {
@@ -159,7 +157,7 @@ async function populateDatabase() {
       if (keeperError) throw keeperError;
     }
     console.log(
-      `✓ Inserted ${keeperHistoryToInsert.length} keeper history records`
+      `✓ Inserted ${keeperHistoryToInsert.length} keeper history records`,
     );
 
     // 5. Insert player stats

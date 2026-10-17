@@ -1,8 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 import rater2025 from "../app/assets/rater/rater2025.json";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
   throw new Error("Missing environment variables");
@@ -104,10 +104,10 @@ async function correctRater2025() {
 
     // Step 3: Create missing players
     const missingPlayers = raterData.filter(
-      (player) => !existingPlayerIds.has(player.id)
+      (player) => !existingPlayerIds.has(player.id),
     );
     console.log(
-      `🆕 Found ${missingPlayers.length} players not in database, creating them...`
+      `🆕 Found ${missingPlayers.length} players not in database, creating them...`,
     );
 
     if (missingPlayers.length > 0) {
@@ -133,14 +133,14 @@ async function correctRater2025() {
         if (insertError) {
           console.error(
             `❌ Error inserting player batch starting at index ${i}:`,
-            insertError.message
+            insertError.message,
           );
         } else {
           console.log(
             `✅ Inserted ${Math.min(
               i + BATCH_SIZE,
-              playersToInsert.length
-            )} / ${playersToInsert.length} missing players...`
+              playersToInsert.length,
+            )} / ${playersToInsert.length} missing players...`,
           );
         }
       }
@@ -182,7 +182,7 @@ async function correctRater2025() {
             raterInsert[columnName] = stat.rating;
           } else {
             console.warn(
-              `⚠️  Unknown stat ID ${stat.forStat} for player ${playerId}`
+              `⚠️  Unknown stat ID ${stat.forStat} for player ${playerId}`,
             );
           }
         });
@@ -206,14 +206,14 @@ async function correctRater2025() {
       if (error) {
         console.error(
           `❌ Error inserting batch starting at index ${i}:`,
-          error.message
+          error.message,
         );
         console.error(`🔍 Error details:`, error);
         errorCount += batch.length;
       } else {
         insertedCount += batch.length;
         console.log(
-          `✅ Inserted ${insertedCount} / ${ratersToInsert.length} players...`
+          `✅ Inserted ${insertedCount} / ${ratersToInsert.length} players...`,
         );
       }
     }
