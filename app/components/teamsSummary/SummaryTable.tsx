@@ -23,8 +23,8 @@ export const SummaryTable = (): ReactElement => {
         name: team.team.name,
         currentSalaries: team.totals.currentSalary,
         currentMargin: 220 - team.totals.currentSalary,
-        previousRaters: team.totals.rater2025,
-        currentRaters: team.totals.rater2026,
+        previousRaters: team.totals.rater2026,
+        currentRaters: team.totals.rater2027,
         id: team.team.id,
       });
     });

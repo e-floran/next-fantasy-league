@@ -43,7 +43,7 @@ async function fetchFromDatabase(): Promise<{
 
   // Fetch all players with relations
   const { data: playersData, error: playersError } = await supabase.from(
-    "players"
+    "players",
   ).select(`
       *,
       keeper_history (season),
@@ -77,17 +77,17 @@ async function fetchFromDatabase(): Promise<{
     }));
 
   console.log(
-    `📊 Loaded ${teams.length} teams and ${unpickablePlayers.length} unpickable players`
+    `📊 Loaded ${teams.length} teams and ${unpickablePlayers.length} unpickable players`,
   );
   return { teams, unpickablePlayers };
 }
 
 function transformPlayerFromDb(dbPlayer: any) {
   const currentRater = dbPlayer.player_raters?.find(
-    (r: any) => r.season === CURRENT_SEASON.toString()
+    (r: any) => r.season === CURRENT_SEASON.toString(),
   );
   const previousRater = dbPlayer.player_raters?.find(
-    (r: any) => r.season === LAST_SEASON.toString()
+    (r: any) => r.season === LAST_SEASON.toString(),
   );
   const stats = dbPlayer.player_stats?.[0];
 
@@ -178,7 +178,7 @@ async function fetchFromESPN() {
   const ratersReq = new Request(ratersUrl);
   ratersReq.headers.set(
     "X-Fantasy-Filter",
-    JSON.stringify(ratersHeaders["X-Fantasy-Filter"])
+    JSON.stringify(ratersHeaders["X-Fantasy-Filter"]),
   );
 
   const [ratersResponse, rostersResponse] = await Promise.all([
@@ -201,9 +201,15 @@ async function fetchFromESPN() {
 
 async function updateDatabase(
   updatedTeams: Team[],
-  updatedUnpickables: UnpickablePlayer[]
+  updatedUnpickables: UnpickablePlayer[],
+  currentRaters: RatedRawPlayer[],
 ) {
   console.log("💾 Updating database...");
+
+  // Create a map of player ID to ESPN data for quick lookup
+  const espnPlayerDataMap = new Map(
+    currentRaters.map((rater) => [rater.player.id, rater]),
+  );
 
   for (const team of updatedTeams) {
     console.log(`📝 Updating team ${team.id} (${team.name})...`);
@@ -220,16 +226,16 @@ async function updateDatabase(
     if (fetchError) {
       console.error(
         `❌ Error fetching current team players for team ${team.id}:`,
-        fetchError
+        fetchError,
       );
     } else if (currentTeamPlayers) {
       const droppedPlayers = currentTeamPlayers.filter(
-        (p) => !newRosterPlayerIds.includes(p.id)
+        (p) => !newRosterPlayerIds.includes(p.id),
       );
 
       if (droppedPlayers.length > 0) {
         console.log(
-          `🗑️  Removing ${droppedPlayers.length} dropped players from team ${team.id}`
+          `🗑️  Removing ${droppedPlayers.length} dropped players from team ${team.id}`,
         );
 
         for (const droppedPlayer of droppedPlayers) {
@@ -241,11 +247,11 @@ async function updateDatabase(
           if (dropError) {
             console.error(
               `❌ Error removing player ${droppedPlayer.id} from team:`,
-              dropError
+              dropError,
             );
           } else {
             console.log(
-              `  ✅ Player ${droppedPlayer.id} removed from team roster`
+              `  ✅ Player ${droppedPlayer.id} removed from team roster`,
             );
           }
         }
@@ -255,6 +261,17 @@ async function updateDatabase(
     for (const player of team.roster) {
       console.log(`  👤 Updating player ${player.id} (${player.fullName})...`);
 
+      // Get current season games played from ESPN data
+      const espnPlayerData = espnPlayerDataMap.get(player.id);
+      const currentSeasonStats = espnPlayerData?.player?.stats?.find(
+        (stat: any) =>
+          stat.seasonId === CURRENT_SEASON && stat.statSourceId === 0,
+      );
+      const gamesPlayed =
+        currentSeasonStats?.appliedStats?.gamesPlayed ||
+        player.gamesPlayed ||
+        0;
+
       // Update player basic info
       const { error: playerError } = await supabase.from("players").upsert(
         {
@@ -262,12 +279,12 @@ async function updateDatabase(
           team_id: team.id,
           full_name: player.fullName,
           salary: player.salary,
-          games_played: player.gamesPlayed,
+          games_played: gamesPlayed,
           injured_spot: player.injuredSpot,
           is_unpickable: false,
           has_not_played_last_season: player.hasNotPlayedLastSeason || false,
         },
-        { onConflict: "id" }
+        { onConflict: "id" },
       );
 
       if (playerError) {
@@ -289,7 +306,7 @@ async function updateDatabase(
         if (keeperError) {
           console.error(
             `❌ Error updating keeper history for player ${player.id}:`,
-            keeperError
+            keeperError,
           );
         }
       }
@@ -310,18 +327,18 @@ async function updateDatabase(
           turnovers: player.detailedStats.TO,
           pts: player.detailedStats.PTS,
         },
-        { onConflict: "player_id" }
+        { onConflict: "player_id" },
       );
 
       if (statsError) {
         console.error(
           `❌ Error updating stats for player ${player.id}:`,
-          statsError
+          statsError,
         );
       }
 
-      // Update ONLY current season raters (2026)
-      // Previous season data (2025) should not be modified by daily updates
+      // Update ONLY current season raters (2027)
+      // Previous season data (2026) should not be modified by daily updates
       const { error: ratersError } = await supabase
         .from("player_raters")
         .upsert(
@@ -339,13 +356,13 @@ async function updateDatabase(
             to_rater: player.categoriesRaters.TO,
             pts_rater: player.categoriesRaters.PTS,
           },
-          { onConflict: "player_id,season" }
+          { onConflict: "player_id,season" },
         );
 
       if (ratersError) {
         console.error(
           `❌ Error updating raters for player ${player.id}:`,
-          ratersError
+          ratersError,
         );
       }
     }
@@ -365,13 +382,13 @@ async function updateDatabase(
         is_unpickable: true,
         has_not_played_last_season: false,
       },
-      { onConflict: "id" }
+      { onConflict: "id" },
     );
 
     if (error) {
       console.error(
         `❌ Error updating unpickable player ${unpickable.id}:`,
-        error
+        error,
       );
     }
   }
@@ -402,18 +419,17 @@ async function main() {
       previousTeams,
       newRosters,
       lastSeasonRaters,
-      currentRaters
+      currentRaters,
     );
 
     // Check unpickable players status
     console.log("\n🏥 Checking unpickable players status...");
-    const updatedUnpickables = await checkUnpickablePlayersStatus(
-      unpickablePlayers
-    );
+    const updatedUnpickables =
+      await checkUnpickablePlayersStatus(unpickablePlayers);
 
-    // Update database
+    // Update database - pass currentRaters so we can extract games played
     console.log("\n💾 Updating database with fresh data...");
-    await updateDatabase(updatedTeams, updatedUnpickables);
+    await updateDatabase(updatedTeams, updatedUnpickables, currentRaters);
 
     console.log("\n✅ Database update completed successfully!");
     console.log(`📊 Final stats:`, {

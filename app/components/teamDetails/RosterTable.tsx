@@ -80,7 +80,7 @@ export const RosterTable = ({
               style={styles.columnHeader}
               onClick={() => sortColumnByArgument("currentRater")}
             >
-              {"Rater 2026"} {sortColumn === "currentRater" ? columnIcon : null}
+              {"Rater 2027"} {sortColumn === "currentRater" ? columnIcon : null}
             </th>
             <th
               style={styles.columnHeader}
@@ -139,8 +139,8 @@ export const RosterTable = ({
         <tfoot>
           <tr>
             <td>Totaux</td>
-            <td>{activeTeamData?.totals?.rater2025.toFixed(2)}</td>
             <td>{activeTeamData?.totals?.rater2026.toFixed(2)}</td>
+            <td>{activeTeamData?.totals?.rater2027.toFixed(2)}</td>
             <td>-</td>
             <td>{activeTeamData?.totals?.currentSalary}</td>
             <td>{activeTeamData?.totals?.projectedSalary}</td>

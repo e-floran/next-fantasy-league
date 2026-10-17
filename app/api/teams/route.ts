@@ -15,7 +15,7 @@ export async function GET() {
       console.error("Missing Supabase environment variables");
       return NextResponse.json(
         { error: "Server configuration error" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -31,7 +31,7 @@ export async function GET() {
 
     // Fetch all players with their related data
     const { data: players, error: playersError } = await supabase.from(
-      "players"
+      "players",
     ).select(`
         *,
         keeper_history (season),
@@ -68,18 +68,18 @@ export async function GET() {
     console.error("Error fetching teams:", error);
     return NextResponse.json(
       { error: "Failed to fetch teams" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
 
 function transformPlayer(dbPlayer: any) {
-  // Find current season (2026) and previous season (2025) raters
+  // Find current season (2027) and previous season (2026) raters
   const currentRater = dbPlayer.player_raters?.find(
-    (r: any) => r.season === "2026"
+    (r: any) => r.season === "2027",
   );
   const previousRater = dbPlayer.player_raters?.find(
-    (r: any) => r.season === "2025"
+    (r: any) => r.season === "2026",
   );
 
   // player_stats is a single object (one-to-one relationship)

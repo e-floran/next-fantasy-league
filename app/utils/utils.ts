@@ -15,7 +15,7 @@ export const computeNewSalary = (
   salary: number,
   keeperHistory: number,
   omitDelta: boolean,
-  raterDelta: number
+  raterDelta: number,
 ) => {
   const valueWithKeeps =
     keeperHistory >= 2 ? salary + (keeperHistory - 1) * 5 : salary;
@@ -57,17 +57,17 @@ export const getNewSalariesByPlayerId = (team?: Team) => {
           player.salary,
           player.keeperHistory.length,
           player.previousRater === 0,
-          player.currentRater - parseNegativeValue(player.previousRater)
+          player.currentRater - parseNegativeValue(player.previousRater),
         ),
-        1
-      )
+        1,
+      ),
     );
   });
   return salariesMap;
 };
 
 const getTeamTotalProjectedSalary = (
-  newSalariesByPlayerId: Map<number, number>
+  newSalariesByPlayerId: Map<number, number>,
 ) => {
   const salaries: number[] = [];
   newSalariesByPlayerId.forEach((value) => {
@@ -81,7 +81,7 @@ const getTeamTotalProjectedSalary = (
 
 const getTeamKeepersSalaries = (
   newSalariesByPlayerId: Map<number, number>,
-  keepers?: number[]
+  keepers?: number[],
 ) => {
   const salaries: number[] = [];
   if (!keepers || keepers.length === 0) {
@@ -128,19 +128,19 @@ export const reduceStats = (stats: PlayerDetailedStats[]) => {
       BLK: 0,
       TO: 0,
       PTS: 0,
-    }
+    },
   );
 };
 
 export const getTeamTotals = (
   team: Team,
   newSalariesByPlayerId: Map<number, number>,
-  keepers: number[]
+  keepers: number[],
 ) => {
-  const rater2025 = team.roster
+  const rater2026 = team.roster
     .map((player) => player.previousRater)
     .reduce((partialSum, a) => partialSum + a, 0);
-  const rater2026 = team.roster
+  const rater2027 = team.roster
     .map((player) => player.currentRater)
     .reduce((partialSum, a) => partialSum + a, 0);
   const currentSalary = team.roster
@@ -151,17 +151,17 @@ export const getTeamTotals = (
   const stats: PlayerDetailedStats = reduceStats(
     team.roster
       .filter((player) => player.detailedStats != null)
-      .map((player) => player.detailedStats!)
+      .map((player) => player.detailedStats!),
   );
 
   const projectedSalary = getTeamTotalProjectedSalary(newSalariesByPlayerId);
   const projectedKeepersSalaries = getTeamKeepersSalaries(
     newSalariesByPlayerId,
-    keepers
+    keepers,
   );
 
   return {
-    rater2025,
+    rater2027,
     rater2026,
     currentSalary,
     projectedSalary,
@@ -183,7 +183,7 @@ export const parseRanking = (ranking: number) => {
 export const getTeamStatsAfterTrade = (
   teamStats: PlayerDetailedStats,
   outStats: PlayerDetailedStats,
-  inStats: PlayerDetailedStats
+  inStats: PlayerDetailedStats,
 ): PlayerCategoriesRaters => {
   const fg =
     teamStats.FGM / teamStats.FGA -
@@ -214,7 +214,7 @@ export const getDataByTeamId = (teams: Team[], selectedKeepers: number[]) => {
     const teamData = getTeamTotals(
       team,
       newSalariesByPlayerId,
-      selectedKeepers
+      selectedKeepers,
     );
     dataMap.set(team.id, { newSalariesByPlayerId, totals: teamData, team });
   });
@@ -224,7 +224,7 @@ export const getDataByTeamId = (teams: Team[], selectedKeepers: number[]) => {
 export const downloadElement = (
   data: unknown,
   fileName: string,
-  setIsUpdating?: Dispatch<SetStateAction<boolean>>
+  setIsUpdating?: Dispatch<SetStateAction<boolean>>,
 ) => {
   const element = document.createElement("a");
   const textFile = new Blob([JSON.stringify(data)], {
