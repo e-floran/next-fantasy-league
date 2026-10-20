@@ -66,8 +66,12 @@ export async function GET() {
     });
   } catch (error) {
     console.error("Error fetching teams:", error);
+    const stringifiedError = JSON.stringify(
+      error,
+      Object.getOwnPropertyNames(error),
+    );
     return NextResponse.json(
-      { error: `Failed to fetch teams in route : ${error}` },
+      { error: `Failed to fetch teams in route : ${stringifiedError}` },
       { status: 500 },
     );
   }
