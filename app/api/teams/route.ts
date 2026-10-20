@@ -67,7 +67,7 @@ export async function GET() {
   } catch (error) {
     console.error("Error fetching teams:", error);
     return NextResponse.json(
-      { error: "Failed to fetch teams" },
+      { error: `Failed to fetch teams in route : ${error}` },
       { status: 500 },
     );
   }
