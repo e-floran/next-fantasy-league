@@ -5,8 +5,8 @@ import { createClient } from "@supabase/supabase-js";
 
 // config({ path: path.join(__dirname, "../.env.local") });
 
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_ANON_KEY;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
   throw new Error("Missing environment variables");
@@ -401,8 +401,8 @@ async function main() {
   try {
     console.log("🚀 Starting database update process...\n");
     console.log("Environment check:", {
-      hasSupabaseUrl: !!process.env.SUPABASE_URL,
-      hasSupabaseKey: !!process.env.SUPABASE_ANON_KEY,
+      hasSupabaseUrl: !!process.env.NEXT_PUBLIC_SUPABASE_URL,
+      hasSupabaseKey: !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
       nodeEnv: process.env.NODE_ENV,
     });
 
